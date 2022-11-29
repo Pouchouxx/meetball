@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
   resources :matches, only: [:destroy]
   resources :teams, only: [:index, :show, :new, :update, :create, :edit]
-  resources :vote, only: [:create, :update]
+  resources :votes, only: [:create, :update]
   get "matches/:id/recap", to: "matches#recap"
   # Defines the root path route ("/")
   # root "articles#index"
