@@ -6,6 +6,6 @@ class Match < ApplicationRecord
   validates :comment, presence: true, length: { in: 20..100 }
 
   def date_now?
-    date >= Datetime.now
+    date >= Time.now
   end
 end
