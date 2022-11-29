@@ -5,8 +5,6 @@ class User < ApplicationRecord
   has_many :matches
   has_many :participations, dependent: :destroy
   has_many :messages
-  validates :first_name, :last_name, presence: true
-  validates :pseudo, presence: true, uniqueness: true, length: { in: 3..15 }
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 end
