@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_many :votes
   has_many :matches
-  has_many :participations
+  has_many :participations, dependent: :destroy
   has_many :messages
   validates :first_name, :last_name, presence: true
   validates :pseudo, presence: true, uniqueness: true, length: { in: 3..15 }
