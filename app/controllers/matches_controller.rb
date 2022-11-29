@@ -1,5 +1,14 @@
 class MatchesController < ApplicationController
   def index
+    @matches = Match.all
+    @markers = @matches.geocoded.map do |match|
+      {
+        lat: match.latitude,
+        lng: match.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {match: match})
+
+      }
+    end
   end
 
   def show
@@ -9,22 +18,33 @@ class MatchesController < ApplicationController
 
   def new
     @match = Match.new
-
   end
 
   def create
     @match = Match.new(match_params)
     @match.user = current_user
     @match.save
-    redirect_to match_path(@match)
+    redirect_to matches_path
   end
 
   def update
+    @match = Match.find(params[:id])
+    @match.update(match_params)
+    redirect_to match_path(@match)
   end
 
   def edit
   end
 
   def destroy
+    @match = Match.find(params[:id])
+    @match.destroy
+    redirect_to matches_path(@match), status: :see_other
+  end
+
+  private
+
+  def match_params
+    params.require(:match).permit(:level_rating, :address, :comment, :date)
   end
 end

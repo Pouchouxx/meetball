@@ -1,2 +1,14 @@
 <h1>Matches#index</h1>
 <p>Find me in app/views/matches/index.html.erb</p>
+<div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
+  <% @matches.each do |match| %>
+  <%= match.address %>
+  <%= match.comment %>
+  <%= match.level_rating %>
+  <% end %>
+
+
