@@ -5,7 +5,8 @@ class MatchesController < ApplicationController
       {
         lat: match.latitude,
         lng: match.longitude,
-        info_window: render_to_string(partial: "info_window", locals: {match: match})
+        info_window: render_to_string(partial: "info_window", locals: {match: match}),
+        image_url: helpers.asset_url("889455.png")
 
       }
     end
@@ -13,7 +14,6 @@ class MatchesController < ApplicationController
 
   def show
     @match = Match.find(params[:id])
-   #@booking = Booking.new
   end
 
   def new
@@ -23,8 +23,11 @@ class MatchesController < ApplicationController
   def create
     @match = Match.new(match_params)
     @match.user = current_user
-    @match.save
-    redirect_to matches_path
+    if @match.save
+      redirect_to matches_path
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def update
