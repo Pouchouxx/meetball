@@ -11,11 +11,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("https://mobimg.b-cdn.net/v3/fetch/c9/c96d7d947894bcd14c2fbc4c347c122e.jpeg?w=1470&r=0.5625"), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/root/code/Pouchouxx/meetball/app/assets/images/sports-basketball-358041.jpeg);
 }
 
 .poster h1 {
-  margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 40px;
