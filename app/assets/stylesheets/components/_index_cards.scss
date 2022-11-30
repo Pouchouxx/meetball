@@ -19,7 +19,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("https://wallpaperaccess.com/full/1743961.jpg"), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("https://wallpaperaccess.com/full/1743961.jpg");
 }
 
 .bg-text {
@@ -30,21 +30,21 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("https://c0.wallpaperflare.com/preview/674/720/932/lincoln-united-states-ball-court.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("https://c0.wallpaperflare.com/preview/674/720/932/lincoln-united-states-ball-court.jpg");
 }
 
 .bg-image3 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("https://p-a-l-m.com/wp-content/uploads/2021/01/Terrain-de-basket-Pigalle-Paris-art-artistique-street-art-playground-couleurs-75009-artiste-8.jpeg");
+  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("https://p-a-l-m.com/wp-content/uploads/2021/01/Terrain-de-basket-Pigalle-Paris-art-artistique-street-art-playground-couleurs-75009-artiste-8.jpeg");
 }
 
 .bg-map {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("https://www.leparisien.fr/resizer/efCs6S_-rGdBhi2P0NQeijAEUws=/932x582/arc-anglerfish-eu-central-1-prod-leparisien.s3.amazonaws.com/public/5UAWECLJVFOXQS6RPEGA3XXU3M.jpg");
+  //background-size: cover;
+  //background-position: center;
+  //background-repeat: no-repeat;
+  //background-image: url("https://www.leparisien.fr/resizer/efCs6S_-rGdBhi2P0NQeijAEUws=/932x582/arc-anglerfish-eu-central-1-prod-leparisien.s3.amazonaws.com/public/5UAWECLJVFOXQS6RPEGA3XXU3M.jpg");
   //background-image: url("app/assets/images/map.png");
 }
 
