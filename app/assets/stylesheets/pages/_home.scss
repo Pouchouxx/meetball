@@ -11,7 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/root/code/Pouchouxx/meetball/app/assets/images/sports-basketball-358041.jpeg);
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("https://mobimg.b-cdn.net/v3/fetch/b7/b76cb60a636ce314e385bd248fa5d101.jpeg?w=1470&r=0.5625");
 }
 
 .poster h1 {
@@ -19,4 +19,13 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 40px;
   font-weight: bold;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
 }
