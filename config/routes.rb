@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :teams, only: [:index, :show, :new, :update, :create, :edit]
   resources :votes, only: [:create, :update]
   get "matches/:id/recap", to: "matches#recap"
+  get "users/:id", to: "users#show", as: 'usershow'
   # Defines the root path route ("/")
   # root "articles#index"
 end
