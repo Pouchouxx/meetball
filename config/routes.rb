@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   end
   resources :votes, only: [:create, :update]
   get "matches/:id/recap", to: "matches#recap"
+  get "users/:id", to: "users#profile", as: "profile"
   # Defines the root path route ("/")
   # root "articles#index"
 end
