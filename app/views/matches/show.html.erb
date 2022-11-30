@@ -1,2 +1,14 @@
-<h1>Matches#show</h1>
-<div class="container"></div>
+<h1>Matche#show</h1>
+<div class="container">
+<ul>
+<li><%= @match.user.first_name%> <%= @match.user.last_name %></li>
+<li><%= @match.address %></li>
+<li><%= @match.date %></li>
+<li><%= @match.level_rating %></li>
+</ul>
+</div>
+
+<% if current_user == @match.user %>
+<%= link_to "delete this match", match_path(@match), data: {turbo_method: :delete} %>
+<%= link_to "update this match", edit_match_path(@match)%>
+<% end %>
