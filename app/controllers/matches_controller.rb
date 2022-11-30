@@ -15,6 +15,8 @@ class MatchesController < ApplicationController
 
   def show
     @match = Match.find(params[:id])
+    @team_one = @match.teams.first
+    @team_two = @match.teams.last
   end
 
   def new
@@ -38,6 +40,7 @@ class MatchesController < ApplicationController
   end
 
   def edit
+    @match = Match.find(params[:id])
   end
 
   def destroy
@@ -47,6 +50,7 @@ class MatchesController < ApplicationController
   end
 
   private
+
 
   def match_params
     params.require(:match).permit(:level_rating, :address, :comment, :date)
