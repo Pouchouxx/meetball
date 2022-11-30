@@ -156,9 +156,11 @@
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
-  <% @matches.each do |match| %>
-  <%= match.address %>
-  <%= match.comment %>
-  <%= match.level_rating %>
+ <% @matches.each do |match| %>
+   <%= link_to match_path(match) do %>
+    <%= match.address %>
+    <%= match.comment %>
+    <%= match.level_rating %>
+    <% end %>
   <% end %>
 </div>
