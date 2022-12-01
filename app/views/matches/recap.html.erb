@@ -1,1 +1,16 @@
-feur
+<div class="container chatroom">
+  <h1><%= @match.teams.name %></h1>
+
+  <div class="messages" data-match-subscription-target="messages"
+    data-controller="match-subscription"
+    data-match-subscription-match-id-value="<%= @match.id %>"
+  >
+    <% @match.messages.each do |message| %>
+      <%= render "messages/message", message: message %>
+    <% end %>
+  </div>
+    <%= simple_form_for [@match, @message],html: { data: { action: "turbo:submit-end->match-subscription#resetForm" }, class: "d-flex" } do |f|%>
+      <%= f.input :content, label: false, placeholder: "Message", wrapper_html: {class: "flex-grow-1"} %>
+      <%= f.submit "Send", class: "btn btn-primary mb-3" %>
+    <% end %>
+</div>

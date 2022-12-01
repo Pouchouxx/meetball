@@ -51,7 +51,7 @@ class MatchesController < ApplicationController
 
   def recap
     @match = Match.find(params[:id])
-
+    @message = Message.new
   end
 
 
