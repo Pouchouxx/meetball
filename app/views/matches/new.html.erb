@@ -1,24 +1,17 @@
-<h1>Matches#new</h1>
-<%= simple_form_for [@match],
-                    html: {
-                      data: {
-                        controller: 'flatpickr'
-                      }
-                    } do |f| %>
 
- <%= f.input :address,
-            input_html: {data: {address_autocomplete_target: "address"}, class: "d-none"},
-            wrapper_html: {data: {controller: "address-autocomplete",
-            address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}} %>
-      <br></div>
-  <%= f.input :date,
-    as: :string,
-            input_html: {
-              data: {
-                flatpickr_target: 'dateInput',
-              }
-            } %>
-  <%= f.input :comment %>
-  <%= f.input :level_rating %>
-  <%= f.submit %>
-<% end %>
+<div class="form">
+  <div class="box">
+    <img class="logo" alt="dribble-logo" src="https://cdn-icons-png.flaticon.com/512/889/889455.png" />
+    <p class="signin">Nouveau Match</p>
+    <p class="signin-text">Choisis ton terrain, ton niveau et RDV au playground !</p>
+    <br/>
+    <input name="address" type="text" placeholder="Adresse">
+    <br/>
+    <input name="date" type="text" placeholder="Date" required>
+    <br/>
+    <input name="comment" type="text" placeholder="Description">
+    <br/>
+    <input name="level_rating" type="" placeholder="Niveau de jeu">
+    <button>Lezzgo</button>
+  </div>
+</div>
