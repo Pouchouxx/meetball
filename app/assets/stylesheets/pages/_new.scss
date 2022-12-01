@@ -26,14 +26,16 @@ $title-text: 'Work Sans', sans-serif;
 }
 
 .box{
-  background: $white;
-  border-radius: 0.625rem;
-  box-shadow: 0 0 40px 0 rgba(255, 112, 67, .6);
+  background: #fff;
+  border-radius: 2.625rem;
+  box-shadow: 0 0 40px  rgba(255, 112, 67, 60%);
   display: flex;
   flex-direction: column;
-  height: 33.25rem;
+  height: 43.25rem;
   position: absolute;
-  width: 26.75rem;
+  width: 31.75rem;
+  padding: 10 rem;
+  padding: 25px;
   margin-bottom: 7%;
 }
 
@@ -102,17 +104,16 @@ i:hover{
 }
 
 input{
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: none;
-  border: 0;
-  border-bottom: 2px solid $slate;
-  font: 500 .9rem $title-text, sans-serif;
-  height: 2.15em;
-  margin-top: .7em;
-  transition: all .15s ease-out;
-  -webkit-transition: all .15s ease-out;
-  width: 80%;
+
+  width: 100%;
+  border: none;
+  color: #ff7143;
+  font-size: x-large;
+  font-weight: bolder;
+  font-family: 'Work Sans';
+  background-color: white;
+  padding-top: 20px;
+
 }
 
 input:focus{
