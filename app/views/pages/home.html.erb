@@ -1,9 +1,10 @@
-<div class="poster">
+<div class="poster" style="  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path "#{rand(6)}.jpeg" %>);
+">
   <div class="container row">
   <h1 class="col-8">MeetBall, spice up your game.</h1>
   <div class="col-4">
-    <a class="btn btn-lg btn-light rounded-pill" href="#">Find games</a>
-    <a class="btn btn-lg btn-light rounded-pill" href="#">Create a game</a>
+  <%= link_to "Find a game", matches_path, class:"btn btn-lg btn-light rounded-pill" %>
+  <%= link_to "Create a game", new_match_path, class:"btn btn-lg btn-light rounded-pill" %>
   </div>
   </div>
 </div>

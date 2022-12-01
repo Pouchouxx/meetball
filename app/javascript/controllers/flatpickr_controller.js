@@ -10,8 +10,8 @@ export default class extends Controller {
 
   connect() {
     flatpickr(this.dateInputTarget, {
-      mode: 'range',
-      "plugins": [new rangePlugin({ input: this.dateInputTarget})]
+      mode: 'single',
+      enableTime: true
     })
   }
 }

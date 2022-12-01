@@ -1,20 +1,34 @@
-<!-- TEST DU DISPLAY DES CARDS DE MATCHS -->
+<!-- DIV ENGLOBANT LES CARDS ET LA MAP -->
 <div class="d-flex home">
-<div class="flex-fill container-fluid mx-3 mt-4 mb-3 col-8">
+  <div class="flex-fill container-fluid mx-3 mt-4 col-8">
     <div class="row">
+      <!-- ITERATION AUTOUR DE CHAQUE MATCH -->
+      <% @matches.each do |match| %>
         <div class="col-6">
+            <!-- CARD -->
+            <%= link_to match_path(match) do %>
             <div class="card p-3 mb-3 bg-image">
                 <div class="d-flex justify-content-between">
                     <div class="d-flex flex-row align-items-center">
                         <div class="icon"> <i class="bx bxl-mailchimp"></i> </div>
                         <div class="ms-2 c-details">
-                            <h6 class="mb-0 card-organizer">Joel</h6>
+                            <h6 class="mb-0 card-organizer"><%= match.user.first_name %></h6>
                         </div>
                     </div>
-                    <div class="badge badge-nba bg-text"> <span>NBA</span> </div>
+                    <div class="badge bg-text badge-<%= match.level_rating %>">
+
+                        <% if match.level_rating == 1 %>
+                          <span>District</span>
+                        <% elsif match.level_rating == 2 %>
+                          <span>Pro A</span>
+                        <% else %>
+                          <span>NBA</span>
+                        <% end %>
+
+                    </div>
                 </div>
                 <div class="mt-5">
-                    <h3 class="heading bg-text" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.2)">Stade Carpentier<br>Demain 30/11 à 16h</h3>
+                    <h3 class="heading bg-text size-text" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.2)"><%= match.address[0, 25] %>...<br><%= match.date %></h3>
                     <div class="mt-5">
                         <div class="progress">
                             <div class="progress-bar bg-text" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -23,142 +37,19 @@
                     </div>
                 </div>
             </div>
+            <% end %>
         </div>
-        <div class="col-6">
-            <div class="card p-3 mb-2 bg-image2">
-                <div class="d-flex justify-content-between">
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="icon"> <i class="bx bxl-dribbble"></i> </div>
-                        <div class="ms-2 c-details">
-                            <h6 class="mb-0 card-organizer">Hugo</h6>
-                        </div>
-                    </div>
-                    <div class="badge badge-proa"> <span>Pro A</span> </div>
-                </div>
-                <div class="mt-5">
-                    <h3 class="heading" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.2)">Bois de Vincennes<br>Dim. 04/12 à 14h</h3>
-                    <div class="mt-5">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 83%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="mt-3"> <span class="text1">5 Inscrits <span class="text2">sur 6 places</span></span> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6">
-            <div class="card p-3 mb-2 bg-image3">
-                <div class="d-flex justify-content-between">
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="icon"> <i class="bx bxl-reddit"></i> </div>
-                        <div class="ms-2 c-details">
-                            <h6 class="mb-0 card-organizer">Julien</h6>
-                        </div>
-                    </div>
-                    <div class="badge badge-district"> <span>District</span> </div>
-                </div>
-                <div class="mt-5">
-                    <h3 class="heading">Playground Pigalle <br>Sam. 03/12 à 10h</h3>
-                    <div class="mt-5">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 17%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="mt-3"> <span class="text1">1 Inscrit <span class="text2">sur 6 places</span></span> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-6">
-            <div class="card p-3 mb-2 bg-image">
-                <div class="d-flex justify-content-between">
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="icon"> <i class="bx bxl-mailchimp"></i> </div>
-                        <div class="ms-2 c-details">
-                            <h6 class="mb-0 card-organizer">Joel</h6>
-                        </div>
-                    </div>
-                    <div class="badge badge-nba"> <span>NBA</span> </div>
-                </div>
-                <div class="mt-5">
-                    <h3 class="heading">Stade Carpentier<br>Demain 30/11 à 16h</h3>
-                    <div class="mt-5">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="mt-3"> <span class="text1">3 Inscrits <span class="text2">sur 6 places</span></span> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6">
-            <div class="card p-3 mb-2 bg-image2">
-                <div class="d-flex justify-content-between">
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="icon"> <i class="bx bxl-dribbble"></i> </div>
-                        <div class="ms-2 c-details">
-                            <h6 class="mb-0 card-organizer">Hugo</h6>
-                        </div>
-                    </div>
-                    <div class="badge badge-proa"> <span>Pro A</span> </div>
-                </div>
-                <div class="mt-5">
-                    <h3 class="heading">Bois de Vincennes<br>Dim. 04/12 à 14h</h3>
-                    <div class="mt-5">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 83%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="mt-3"> <span class="text1">5 Inscrits <span class="text2">sur 6 places</span></span> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-6">
-          <div class="card p-3 mb-2 bg-image3">
-              <div class="d-flex justify-content-between">
-                  <div class="d-flex flex-row align-items-center">
-                      <div class="icon"> <i class="bx bxl-reddit"></i> </div>
-                      <div class="ms-2 c-details">
-                          <h6 class="mb-0 card-organizer">Julien</h6>
-                      </div>
-                  </div>
-                  <div class="badge badge-district"> <span>District</span> </div>
-              </div>
-              <div class="mt-5">
-                  <h3 class="heading">Playground Pigalle <br>Sam. 03/12 à 10h</h3>
-                  <div class="mt-5">
-                      <div class="progress">
-                          <div class="progress-bar" role="progressbar" style="width: 17%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <div class="mt-3"> <span class="text1">1 Inscrit <span class="text2">sur 6 places</span></span> </div>
-                  </div>
-              </div>
-          </div>
-        </div>
+      <% end %>
     </div>
-</div>
+  </div>
 
-<!-- FAUSSE MAP POUR TEST D'AFFICHAGE -->
-<div class="flex-fill container-fluid mx-3 mt-4 mb-3 col-4 bg-map">
-  <!--<div class="row">
-    <div class="col-12 bg-map">
-    </div>
-  </div>-->
-</div>
-</div>
-
-<!-- DISPLAY DE LA MAP -->
-<div style="width: 100%; height: 600px;"
+<!-- MAPBOX AVEC TERRAINS -->
+<div class="flex-fill container-fluid mt-4 mb-3 me-3 col-4 bg-map">
+<div style="width: 100%; height: 100%"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+</div>
+</div>
 
-  <% @matches.each do |match| %>
-  <%= match.address %>
-  <%= match.comment %>
-  <%= match.level_rating %>
-  <% end %>
 </div>
