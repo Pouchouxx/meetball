@@ -1,25 +1,27 @@
+<%= image_tag "3v3-basket", class: "poster" %>
 <h1><%= @user.email %></h1>
 <div class="container mt-3" >
   <div class="success">
-   <div class="card"><h2>Your personnal Card</h2>
-   <br>
+   <div class="card"><h2>Profile</h2>
+      <div class="infos-user">
+        <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar-profile dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+       </div>
+         <div class="align-circle">
+         <h3 class="circle one-line"> username</h3>
 
-        <h3> MVP Title</h3>
-         <p>5 times </p>
-        <h3>Match played</h3>
-          <p>26 matchs played</p>
+          <h3 class="circle one-line">winrate</h3>
 
 
-        <h3>Main position</h3>
-          <p>Point gard</p>
+            <h3 class="circle one-line">Trophies</h3>
+            </div>
 
-          <h3>Trophies</h3>
-          <%= image_tag "mvp" %>
-          <p></p>
-      </div>
-  <div> <h2>AVATAR</h2>
-    <%= image_tag "avatar1" %>
-
-  </div>
+            <div class="bio-user"><h4> Bio</h4>
+              <p>Je jouais au basketball en club quand j'étais petit, j'ai un niveau correct, je jouais avec le fils de Lebron, si t'es un bon tu vois qui s'est.
+            Bref j'ai hate de jouer avec vous !</p>
+        </div>
+            <div class=""></div>
+            <p></p>
+        </div>
+    </div>
   </div>
 </div>
