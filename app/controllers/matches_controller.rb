@@ -53,6 +53,6 @@ class MatchesController < ApplicationController
 
 
   def match_params
-    params.require(:match).permit(:level_rating, :address, :comment, :date)
+    params.require(:match).permit(:level_rating, :address, :comment, :date,)
   end
 end
