@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :participations, only: [:create, :destroy]
   end
   resources :votes, only: [:create, :update]
-  get "matches/:id/recap", to: "matches#recap"
+  get "matches/:id/recap", to: "matches#recap", as: "recap"
   get "users/:id", to: "users#profile", as: "profile"
   # Defines the root path route ("/")
   # root "articles#index"

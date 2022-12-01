@@ -49,6 +49,12 @@ class MatchesController < ApplicationController
     redirect_to matches_path(@match), status: :see_other
   end
 
+  def recap
+    @match = Match.find(params[:id])
+
+  end
+
+
   private
 
 
