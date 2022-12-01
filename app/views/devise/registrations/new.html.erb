@@ -3,13 +3,13 @@
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :first_name,
-                required: true %>
-    <%= f.input :last_name,
-                required: true %>
-    <%= f.input :pseudo,
-                required: true %>
+  <div class="form-inputs col-4 offset-4">
+    <%= f.input :first_name, label: "First name",
+                require: true %>
+    <%= f.input :last_name, label: "Last name",
+                require: true %>
+    <%= f.input :pseudo, label: "Pseudo",
+                require: true %>
     <%= f.input :email,
                 required: true,
                 autofocus: true,
@@ -21,10 +21,10 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
-  </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <div class="form-actions btn btn-primary">
+      <%= f.button :submit, "Sign up" %>
+    </div>
   </div>
 <% end %>
 
