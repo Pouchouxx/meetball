@@ -33,8 +33,8 @@ class Match < ApplicationRecord
   private
 
   def prepare_teams
-    team_one = Team.create(match: self, name: "#{user.first_name}'s team")
-    Team.create(match: self, name: "feur")
+    team_one = Team.create(match: self, name: "#{user.pseudo}'s team")
+    Team.create(match: self, name: "team Z")
     Participation.create(user: user, team: team_one)
   end
 
