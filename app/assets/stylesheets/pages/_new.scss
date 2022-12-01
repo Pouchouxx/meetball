@@ -1,0 +1,173 @@
+//Colours
+$charcoal: #444;
+$grey: #f3f4f4;
+$link: #3a8bbb;
+$pink: #ff7043;
+$slate: #9da3a5;
+$white: #fff;
+
+//Fonts
+@import url('https://fonts.googleapis.com/css?family=Work+Sans: 400,500,600');
+$title-text: 'Work Sans', sans-serif;
+
+.form{
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin: auto;
+}
+
+.form{
+  background: $grey;
+  font-family: $title-text;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.box{
+  background: $white;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 40px 0 rgba(255, 112, 67, .6);
+  display: flex;
+  flex-direction: column;
+  height: 33.25rem;
+  position: absolute;
+  width: 26.75rem;
+  margin-bottom: 7%;
+}
+
+.logo,
+.signin,
+input,
+button,
+.foot-txt,
+.signin-row{
+  margin: 0 auto;
+  position: relative;
+}
+
+.logo{
+  height: 3.125rem;
+  margin-top: 1.875rem;
+  width: 3.125rem;
+}
+
+p{
+  color: $charcoal;
+}
+
+.signin{
+  font: 600 1.8rem $title-text;
+  padding: .17em;
+}
+
+.signin-row{
+  display: flex;
+  justify-content: space-around;
+  margin: .625rem auto .3rem;
+  padding: .625rem;
+  width: 11rem;
+}
+
+.signin-row > i{
+  color: $charcoal;
+  font-size: 2rem;
+  transition: all .15s ease-out;
+  -webkit-transition: all .15s ease-out;
+}
+
+.signin-text{
+  color: $slate;
+  font: 500 .85rem $title-text;
+  margin: 0;
+  padding-top: 0.625rem;
+  text-align: center;
+}
+
+i:hover{
+  cursor: pointer;
+}
+
+.ic1:hover{
+  color: #1da1f2;
+}
+
+.ic2:hover{
+  color: #3b5998;
+}
+
+.ic3:hover{
+  color: #4285f4;
+}
+
+input{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+  border: 0;
+  border-bottom: 2px solid $slate;
+  font: 500 .9rem $title-text, sans-serif;
+  height: 2.15em;
+  margin-top: .7em;
+  transition: all .15s ease-out;
+  -webkit-transition: all .15s ease-out;
+  width: 80%;
+}
+
+input:focus{
+  border-bottom: 2px solid $pink;
+  outline: none;
+}
+
+::-webkit-input-placeholder{
+  color: $slate;
+}
+::-moz-placeholder{
+  color: $slate;
+}
+\:-ms-input-placeholder{
+  color: $slate;
+}
+\:-moz-placeholder{
+  color: $slate;
+}
+
+button{
+  background: $pink;
+  border: 0;
+  border-radius: 1.4em;
+  color: $white;
+  font: 1.1rem $title-text;
+  margin: 1.7em auto .6em;
+  outline: none;
+  padding: .6em;
+  transition: all .15s ease-out;
+  -webkit-transition: all .15s ease-out;
+  width: 80%;
+}
+
+button:hover{
+  background: $charcoal;
+  cursor: pointer;
+}
+
+button:focus{
+  outline: none;
+}
+
+.foot-txt{
+  color: $slate;
+  font: 500 .85rem $title-text;
+  padding: .3em;
+}
+
+.foot-txt:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+.bold{
+  font-weight: 600;
+}
