@@ -1,4 +1,4 @@
-<div class="poster" style="  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path "#{rand(6)}.jpeg" %>);">
+<div class="poster">
   <div class="container row">
   <h1 class="col-8">MeetBall, spice up your game.</h1>
   <div class="col-4">
@@ -6,4 +6,10 @@
   <%= link_to "Create a game", new_match_path, class:"btn btn-lg btn-light rounded-pill" %>
   </div>
   </div>
+</div>
+
+<div class="background">
+<video autoplay muted loop id="myvideo">
+  <source src="<%= image_path("myvideo.mp4")%>" type="video/mp4">
+</video>
 </div>

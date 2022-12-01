@@ -54,7 +54,6 @@ class MatchesController < ApplicationController
     @message = Message.new
   end
 
-
   private
 
 
