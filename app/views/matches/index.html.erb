@@ -17,13 +17,8 @@
                     </div>
                     <div class="badge bg-text badge-<%= match.level_rating %>">
 
-                        <% if match.level_rating == 1 %>
-                          <span>District</span>
-                        <% elsif match.level_rating == 2 %>
-                          <span>Pro A</span>
-                        <% else %>
-                          <span>NBA</span>
-                        <% end %>
+                          <span><%= match.category %></span>
+
 
                     </div>
                 </div>

@@ -24,13 +24,27 @@ class Match < ApplicationRecord
   belongs_to :user
   has_many :teams, dependent: :destroy
   has_many :messages, dependent: :destroy
-  validates :date, :categories, presence: true
+  validates :date, :level_rating, presence: true
   validates :comment, presence: true, length: { in: 20..100 }
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
   after_create :prepare_teams
 
   CATEGORIES = ["District", "Pro A", "NBA"]
+
+  def category
+    case level_rating
+    when 1
+     "District"
+    when 2
+      "PRO A"
+    when 3
+      "NBA"
+
+    else
+
+    end
+  end
 
   private
 

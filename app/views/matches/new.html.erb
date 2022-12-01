@@ -2,16 +2,28 @@
 <div class="form">
   <div class="box">
     <img class="logo" alt="dribble-logo" src="https://cdn-icons-png.flaticon.com/512/889/889455.png" />
-    <p class="signin">Nouveau Match</p>
-    <p class="signin-text">Choisis ton terrain, ton niveau et RDV au playground !</p>
+        <p class="signin">Nouveau Match</p>
+         <p class="signin-text">Choisis ton terrain, ton niveau et RDV au playground !</p>
+        <%= simple_form_for [@match],
+                    html: {
+                      data: {
+                        controller: 'flatpickr'
+                      }
+                    } do |f| %>
     <br/>
-    <input name="address" type="text" placeholder="Adresse">
+    <%= f.input :address, collection: Match::ADDRESSES.keys %>
+      <br>
+  <%= f.input :date,
+    as: :string,
+            input_html: {
+              data: {
+                flatpickr_target: 'dateInput',
+              }
+            } %>
     <br/>
-    <input name="date" type="text" placeholder="Date" required>
-    <br/>
-    <input name="comment" type="text" placeholder="Description">
-    <br/>
-    <input name="level_rating" type="" placeholder="Niveau de jeu">
-    <button>Lezzgo</button>
+   <%= f.input :comment %>
+    <%= f.input :level_rating %>
+    <%= f.submit%>
   </div>
 </div>
+<% end %>
