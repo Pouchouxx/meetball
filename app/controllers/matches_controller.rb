@@ -51,9 +51,7 @@ class MatchesController < ApplicationController
 
   def recap
     @match = Match.find(params[:id])
-
   end
-
 
   private
 
