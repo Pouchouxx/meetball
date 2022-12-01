@@ -6,10 +6,7 @@
                       }
                     } do |f| %>
 
- <%= f.input :address,
-            input_html: {data: {address_autocomplete_target: "address"}, class: "d-none"},
-            wrapper_html: {data: {controller: "address-autocomplete",
-            address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}} %>
+  <%= f.input :address, collection: Match::ADDRESSES.keys %>
       <br></div>
   <%= f.input :date,
     as: :string,
