@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema[7.0].define(version: 2022_12_01_134043) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,10 +40,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_01_134043) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
-=======
-ActiveRecord::Schema[7.0].define(version: 2022_12_01_101633) do
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  end
 
   create_table "fields", force: :cascade do |t|
     t.string "address"
@@ -54,7 +50,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_01_101633) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["match_id"], name: "index_fields_on_match_id"
->>>>>>> 4d3c9f312a9bec06c6df9900359ef4a1f87f43ef
   end
 
   create_table "matches", force: :cascade do |t|
