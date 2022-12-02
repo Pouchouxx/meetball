@@ -50,11 +50,11 @@
       </div>
     </div>
     <div class="col-4">
-      <div class="chatroom">
+      <div class="chatroom"
+          data-controller="match-subscription"
+          data-match-subscription-match-id-value="<%= @match.id %>">
         <h1><%= @match.teams.name %></h1>
         <div class="messages" data-match-subscription-target="messages"
-          data-controller="match-subscription"
-          data-match-subscription-match-id-value="<%= @match.id %>"
         >
           <% @match.messages.each do |message| %>
             <%= render "messages/message", message: message %>
