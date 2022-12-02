@@ -12,7 +12,7 @@ class MessagesController < ApplicationController
       head :ok
 
     else
-      render "matchs/show", status: :unprocessable_entity
+      render "matches/show", status: :unprocessable_entity
     end
   end
 

@@ -1,6 +1,6 @@
 class Match < ApplicationRecord
   ADDRESSES = {
-    ' 117 Rue Rambuteau, 75001 Paris' => 'https://assets.dnainfo.com/generated/photo/2012/07/1343333554.jpg/extralarge.jpg',
+    '117 Rue Rambuteau, 75001 Paris' => 'https://assets.dnainfo.com/generated/photo/2012/07/1343333554.jpg/extralarge.jpg',
     '17 Rue Léopold Bellan, 75002 Paris' => 'https://www.hoopsfix.com/wp-content/uploads/2021/08/Art-Basketball-Court-London-Joseph-Grimaldi-Park.png',
     '14 Rue Michel le Comte, 75003 Paris' => 'https://eq2q3j5zm2w.exactdn.com/wp-content/uploads/2019/10/Bball-Mural4.jpg?strip=all&lossy=1&ssl=1',
     '14 Rue des Jardins Saint-Paul, 75004 Paris' => 'https://cdn.paris.fr/paris/2021/10/04/original-fbc7cfcaba364529a27cbf77d88da072.jpg',
@@ -26,7 +26,7 @@ class Match < ApplicationRecord
   has_many :messages, dependent: :destroy
   has_many :participations, through: :teams
   validates :date, :level_rating, presence: true
-  validates :comment, presence: true, length: { in: 20..100 }
+  validates :comment, presence: true, length: { in: 20..200 }
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
   after_create :prepare_teams
@@ -67,12 +67,9 @@ class Match < ApplicationRecord
   private
 
   def prepare_teams
-    team_one = Team.create(match: self, name: "#{user.pseudo}'s team")
-    Team.create(match: self, name: "team Z")
-    Participation.create(user: user, team: team_one)
+    team_one = Team.create!(match: self, name: "#{user.pseudo}'s team")
+    Team.create!(match: self, name: "")
+    puts Team.find(team_one.id)
+    Participation.create!(user: user, team_id: team_one.id)
   end
-
-  #def date_now?
-   # date >= Time.now
-  #end
 end
