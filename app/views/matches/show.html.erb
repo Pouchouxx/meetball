@@ -26,7 +26,7 @@
           </div>
           <p class="mx-auto"><%= empty_spot %> <%= 'spot'.pluralize(empty_spot) %> <%= 'left'.pluralize(empty_spot) %></p>
           <% if @team_one.can_accept?(current_user) %>
-            <!--<%= link_to "Join the team", team_participations_path(@team_one), class: 'btn btn-dark', data: {turbo_method: :post} %>-->
+            <%= link_to "Join the team", team_participations_path(@team_one), class: 'btn btn-dark', data: {turbo_method: :post} %>
           <% end %>
         </div>
       </div>
@@ -55,7 +55,6 @@
           <% end %>
         </div>
       </div>
-  <%= link_to "JOIN THE GAME", recap_path(@match) %>
     </div>
   </div>
 
