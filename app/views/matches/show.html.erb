@@ -1,13 +1,13 @@
 <div class="contents">
 
   <!-- SECTION TEAMS-->
-  <div class="col-md-6 quarter" style="background-color:orange;">
+  <div class="col-md-6 quarter part-one">
     <h4 class="p-3">Rejoins la team de ton choix</h4>
     <!-- DIV PERMETTANT L'ALIGNEMENT DES 2 CARDS L'UNE A COTE DE L'AUTRE -->
     <div class="" style="display:flex; align-items: center; justify-content: center;">
       <!-- DIV ENGLOBANT LA CARD DE LA PREMIERE EQUIPE -->
-      <div class="col-4" style="">
-        <div class="card" style="background-color:white;">
+      <div class="col-4 m-4" style="">
+        <div class="card">
           <p>Team 1</p>
           <div class="mx-auto" style="display:flex;">
             <div class="cercle mx-1"></div>
@@ -19,7 +19,7 @@
         </div>
       </div>
       <!-- DIV ENGLOBANT LA CARD DE LA DEUXIEME EQUIPE -->
-      <div class="col-4">
+      <div class="col-4 m-4">
         <div class="card">
           <p>Team 2</p>
           <div class="mx-auto" style="display:flex;">
@@ -38,13 +38,13 @@
   <div class="col-md-6 quarter" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= Match::ADDRESSES[@match.address] %>);"></div>
 
   <!-- SECTION MESSAGE DE L'ORGANISATEUR -->
-  <div class="col-md-6 quarter bgball" style="background-color:white;">
-    <h4 class="p-3" style="color:orange;">Message de l'organisateur</h4>
+  <div class="col-md-6 quarter bgball part_three">
+    <h4 class="p-3 part-three-text">Message de l'organisateur</h4>
 
     <!-- MISE EN FORME DU MESSAGE AVEC ASPECT CITATION BOOTSTRAP -->
     <figure class="p-5 m-5">
-      <blockquote class="blockquote" style="font-size:30px;">
-        <p style="color:white;"><%= @match.comment %></p>
+      <blockquote class="blockquote">
+        <p class="part-three-comment"><%= @match.comment %></p>
       </blockquote>
       <figcaption class="blockquote-footer">
         <%= @match.user.first_name %> - <cite title="Source Title">NBA Legend</cite>

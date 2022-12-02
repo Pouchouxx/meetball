@@ -11,7 +11,7 @@ html,body {
   height:50%;
   width:100%;
 }
-.cercle {
+.cercle{
   width: 40px;
   height: 40px;
   border-radius: 20px;
@@ -21,10 +21,31 @@ html,body {
   width: 40px;
   height: 40px;
   border-radius: 20px;
-  background: #F1EBE3;
+  background: white;
 }
 .bgball{
   background-image: url("https://wallpapercave.com/wp/wp3694005.jpg");
   background-repeat: no-repeat;
   background-position: inherit
+}
+.card{
+  background-color:#FBEEDA;
+}
+.part-one{
+  background-color:orange;
+}
+.part-three{
+  background-color:white;
+}
+.part-three-text{
+  color:orange;
+}
+.blockquote{
+  font-size:30px;
+}
+.part-three-comment{
+  color:white;
+}
+ul{
+  list-style-type: none;
 }
