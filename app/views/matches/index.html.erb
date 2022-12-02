@@ -10,7 +10,13 @@
             <div class="card p-3 mb-3" style="background-size: cover; background-position: center; background-repeat: no-repeat; background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= Match::ADDRESSES[match.address] %>);">
                 <div class="d-flex justify-content-between">
                     <div class="d-flex flex-row align-items-center">
-                        <div class="icon"> <i class="bx bxl-mailchimp"></i> </div>
+                        <div class="icon">
+                          <% if match.user.photo.attached? %>
+                            <%= cl_image_tag match.user.photo.key, crop: :fill, gravity: :face,  class:"icon" %>
+                          <% else %>
+                            <%= image_tag "http://4.bp.blogspot.com/_R0Rc6mb8H6E/S1TTZJCtq8I/AAAAAAAAC9A/a50aYOK5o0o/w1200-h630-p-k-no-nu/design-fetish-no-photo-facebook-1.jpg", class:"icon" %>
+                          <% end %>
+                        </div>
                         <div class="ms-2 c-details">
                             <h6 class="mb-0 card-organizer"><%= match.user.first_name %></h6>
                         </div>
