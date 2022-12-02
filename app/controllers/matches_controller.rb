@@ -52,6 +52,8 @@ class MatchesController < ApplicationController
   def recap
     @match = Match.find(params[:id])
     @message = Message.new
+    @team_one = @match.teams.first
+    @team_two = @match.teams.last
   end
 
   private
