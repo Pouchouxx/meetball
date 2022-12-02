@@ -1,3 +1,4 @@
+
 <div class="container mt-3">
   <div class="row">
     <div class="col-8">
@@ -67,70 +68,3 @@
     </div>
   </div>
 </div>
-
-<% if false %>
-
-
-<div class="container col-10" style="display:flex;">
-  <div class="boxebox col-8" style="display:flex;">
-  <!-- DIV ENGLOBANT LA CARD DE LA PREMIERE EQUIPE -->
-      <div class="col-4 m-4">
-        <div class="card">
-          <p><%= @team_one.name %></p>
-          <div class="mx-auto" style="display:flex;">
-          <% @team_one.users.each do |user| %>
-            <div class="cercle mx-1">
-              <% if user.photo.attached? %>
-                <%= cl_image_tag user.photo.key, height: 40, width: 40, crop: :thumb, gravity: :face %>
-              <% else %>
-                <%= user.first_name %>
-              <% end %>
-            </div>
-          <% end %>
-          <% empty_spot = 3 - @team_one.participations.count %>
-          <% empty_spot.times do %>
-            <div class="empty mx-1"></div>
-          <% end %>
-          </div>
-          <p class="mx-auto"><%= empty_spot %> <%= 'place'.pluralize(empty_spot) %> <%= 'restante'.pluralize(empty_spot) %></p>
-
-        </div>
-
-      </div>
-      <!-- DIV ENGLOBANT LA CARD DE LA DEUXIEME EQUIPE -->
-      <div class="col-4 m-4">
-        <div class="card">
-          <p><%= @team_two.name %></p>
-          <div class="mx-auto" style="display:flex;">
-          <% @team_two.users.each do |user| %>
-            <div class="cercle mx-1">
-              <% if user.photo.attached? %>
-                <%= cl_image_tag user.photo.key, height: 40, width: 40, crop: :thumb, gravity: :face %>
-              <% else %>
-                <%= user.first_name %>
-              <% end %>
-            </div>
-          <% end %>
-          <% empty_spot = 3 - @team_two.participations.count %>
-          <% empty_spot.times do %>
-            <div class="empty mx-1"></div>
-          <% end %>
-          </div>
-          <p class="mx-auto"><%= empty_spot %> <%= 'place'.pluralize(empty_spot) %> <%= 'restante'.pluralize(empty_spot) %></p>
-        </div>
-      </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-</div>
-<% end %>

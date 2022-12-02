@@ -3,7 +3,7 @@ class Team < ApplicationRecord
   has_many :participations, dependent: :destroy
   has_many :users, through: :participations
 
-  validates :name, presence: true, length: { in: 3..25 }
+  validates :name, presence: true, length: { in: 3..30 }
 
   def count_validate?
     participations.length < 3

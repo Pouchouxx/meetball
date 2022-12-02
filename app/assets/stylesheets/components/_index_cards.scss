@@ -69,7 +69,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 39px
+  font-size: 39px;
+  object-fit: cover;
 }
 
 .badge span {
