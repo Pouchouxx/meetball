@@ -24,6 +24,7 @@ class Match < ApplicationRecord
   belongs_to :user
   has_many :teams, dependent: :destroy
   has_many :messages, dependent: :destroy
+  has_many :participations, through: :teams
   validates :date, :level_rating, presence: true
   validates :comment, presence: true, length: { in: 20..100 }
   geocoded_by :address
@@ -45,6 +46,16 @@ class Match < ApplicationRecord
 
     end
   end
+
+
+  def max_per_match
+    6
+  end
+
+  def percentage
+    (participations.count / max_per_match.to_f)*100
+  end
+
 
   private
 
