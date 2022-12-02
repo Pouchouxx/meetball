@@ -68,7 +68,7 @@ class Match < ApplicationRecord
 
   def prepare_teams
     team_one = Team.create!(match: self, name: "#{user.pseudo}'s team")
-    Team.create!(match: self, name: "")
+    Team.create!(match: self, name: "team 2")
     puts Team.find(team_one.id)
     Participation.create!(user: user, team_id: team_one.id)
   end
