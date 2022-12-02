@@ -1,0 +1,30 @@
+html,body {
+  height:100%;
+  min-height:100%;
+ }
+.quarter{
+  width:50%;
+  height:100%;
+  float:left;
+}
+.contents{
+  height:50%;
+  width:100%;
+}
+.cercle {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background: #FF8C02;
+}
+.empty{
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background: #F1EBE3;
+}
+.bgball{
+  background-image: url("https://wallpapercave.com/wp/wp3694005.jpg");
+  background-repeat: no-repeat;
+  background-position: inherit
+}

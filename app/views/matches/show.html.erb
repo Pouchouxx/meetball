@@ -1,4 +1,69 @@
-<h1>Matche#show</h1>
+<div class="contents">
+
+  <!-- SECTION TEAMS-->
+  <div class="col-md-6 quarter" style="background-color:orange;">
+    <h4 class="p-3">Rejoins la team de ton choix</h4>
+    <!-- DIV PERMETTANT L'ALIGNEMENT DES 2 CARDS L'UNE A COTE DE L'AUTRE -->
+    <div class="" style="display:flex; align-items: center; justify-content: center;">
+      <!-- DIV ENGLOBANT LA CARD DE LA PREMIERE EQUIPE -->
+      <div class="col-4" style="">
+        <div class="card" style="background-color:white;">
+          <p>Team 1</p>
+          <div class="mx-auto" style="display:flex;">
+            <div class="cercle mx-1"></div>
+            <div class="cercle mx-1"></div>
+            <div class="empty mx-1"></div>
+          </div>
+          <p class="mx-auto">1 place restante</p>
+          <button type="button" class="btn btn-dark">Rejoindre sa team</button>
+        </div>
+      </div>
+      <!-- DIV ENGLOBANT LA CARD DE LA DEUXIEME EQUIPE -->
+      <div class="col-4">
+        <div class="card">
+          <p>Team 2</p>
+          <div class="mx-auto" style="display:flex;">
+            <div class="cercle mx-1"></div>
+            <div class="empty mx-1"></div>
+            <div class="empty mx-1"></div>
+          </div>
+          <p class="mx-auto">2 places restantes</p>
+          <button type="button" class="btn btn-dark">Rejoindre sa team</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION PHOTO DU TERRAIN -->
+  <div class="col-md-6 quarter" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= Match::ADDRESSES[@match.address] %>);"></div>
+
+  <!-- SECTION MESSAGE DE L'ORGANISATEUR -->
+  <div class="col-md-6 quarter bgball" style="background-color:white;">
+    <h4 class="p-3" style="color:orange;">Message de l'organisateur</h4>
+
+    <!-- MISE EN FORME DU MESSAGE AVEC ASPECT CITATION BOOTSTRAP -->
+    <figure class="p-5 m-5">
+      <blockquote class="blockquote" style="font-size:30px;">
+        <p style="color:white;"><%= @match.comment %></p>
+      </blockquote>
+      <figcaption class="blockquote-footer">
+        <%= @match.user.first_name %> - <cite title="Source Title">NBA Legend</cite>
+      </figcaption>
+    </figure>
+  </div>
+
+  <!-- SECTION INFOS SUR LE MATCH-->
+  <div class="col-md-6 quarter" style="background-color:black; color:white;">
+    <h4 class="p-3">Retiens-bien</h4>
+    <ul class="p-3 m-3">
+      <li><h2 style="text-decoration:none; font-size:bold;"><%= @match.date.strftime('%A %d %B') %> à <%= @match.date.strftime('%H') %>h</h2></li>
+      <li>Rendez-vous au <%= @match.address %></li>
+      <li>Niveau de jeu <%= @match.category %></li>
+    </ul>
+  </div>
+</div>
+
+<!--
 <div class="container">
 <ul>
 <li><%= @match.user.first_name%> <%= @match.user.last_name %></li>
@@ -39,3 +104,4 @@
 <% end %>
 
 <%= link_to "JOIN THE GAME", recap_path(@match)%>
+-->
