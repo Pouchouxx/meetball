@@ -33,6 +33,13 @@ class Match < ApplicationRecord
 
   CATEGORIES = ["District", "Pro A", "NBA"]
 
+  DIFFICULTY = {
+    "District"=> 1,
+    "Pro A"=> 2,
+    "NBA"=> 3
+
+}
+
   def category
     case level_rating
     when 1
