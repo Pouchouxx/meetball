@@ -2,7 +2,7 @@
 
   <!-- SECTION TEAMS-->
   <div class="col-md-6 quarter part-one">
-    <h4 class="p-3">Rejoins la team de ton choix</h4>
+    <h4 class="p-3">Join the team of your choice</h4>
     <!-- DIV PERMETTANT L'ALIGNEMENT DES 2 CARDS L'UNE A COTE DE L'AUTRE -->
     <div class="" style="display:flex; align-items: center; justify-content: center;">
       <!-- DIV ENGLOBANT LA CARD DE LA PREMIERE EQUIPE -->
@@ -24,7 +24,7 @@
             <div class="empty mx-1"></div>
           <% end %>
           </div>
-          <p class="mx-auto"><%= empty_spot %> <%= 'place'.pluralize(empty_spot) %> <%= 'restante'.pluralize(empty_spot) %></p>
+          <p class="mx-auto"><%= empty_spot %> <%= 'spot'.pluralize(empty_spot) %> <%= 'left'.pluralize(empty_spot) %></p>
           <% if @team_one.can_accept?(current_user) %>
             <%= link_to "Join the team", team_participations_path(@team_one), class: 'btn btn-dark', data: {turbo_method: :post} %>
           <% end %>
@@ -49,7 +49,7 @@
             <div class="empty mx-1"></div>
           <% end %>
           </div>
-          <p class="mx-auto"><%= empty_spot %> <%= 'place'.pluralize(empty_spot) %> <%= 'restante'.pluralize(empty_spot) %></p>
+          <p class="mx-auto"><%= empty_spot %> <%= 'spot'.pluralize(empty_spot) %> <%= 'left'.pluralize(empty_spot) %></p>
           <% if @team_two.can_accept?(current_user) %>
             <%= link_to "Join the team", team_participations_path(@team_two), class: 'btn btn-dark', data: {turbo_method: :post} %>
           <% end %>
@@ -64,7 +64,7 @@
 
   <!-- SECTION MESSAGE DE L'ORGANISATEUR -->
   <div class="col-md-6 quarter bgball part_three">
-    <h4 class="p-3 part-three-text">Message de l'organisateur</h4>
+    <h4 class="p-3 part-three-text">Organizer's comment</h4>
 
     <!-- MISE EN FORME DU MESSAGE AVEC ASPECT CITATION BOOTSTRAP -->
     <figure class="p-5 m-5">
@@ -79,7 +79,7 @@
 
   <!-- SECTION INFOS SUR LE MATCH-->
   <div class="col-md-6 quarter" style="background-color:black; color:white;">
-    <h4 class="p-3">Retiens-bien</h4>
+    <h4 class="p-3">Save the date</h4>
     <ul class="p-3 m-3">
       <li><h2 style="text-decoration:none; font-size:bold;"><%= @match.date.strftime('%A %d %B') %> à <%= @match.date.strftime('%H') %>h</h2></li>
       <li>Rendez-vous au <%= @match.address %></li>
