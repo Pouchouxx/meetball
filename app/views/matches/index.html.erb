@@ -26,9 +26,9 @@
                     <h3 class="heading bg-text size-text" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.2)"><%= match.address[0, 25] %>...<br><%= match.date %></h3>
                     <div class="mt-5">
                         <div class="progress">
-                            <div class="progress-bar bg-text" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-text" role="progressbar" style="width:<%=match.percentage%>%" aria-valuenow="<%=match.percentage%>" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
-                        <div class="mt-3 bg-text"> <span class="text1">3 Inscrits <span class="text2">sur 6 places</span></span> </div>
+                        <div class="mt-3 bg-text"> <span class="text1"><%= match.max_per_match  - match.participations.count%> spots remaining <span class="text2"><%= match.max_per_match %></span></span> </div>
                     </div>
                 </div>
             </div>
