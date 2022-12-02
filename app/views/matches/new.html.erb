@@ -22,7 +22,7 @@
             } %>
     <br/>
    <%= f.input :comment %>
-    <%= f.input :level_rating %>
+    <%= f.input :level_rating, collection: Match::DIFFICULTY %>
     <%= f.submit%>
   </div>
 </div>
