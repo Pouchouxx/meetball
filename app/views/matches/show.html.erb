@@ -8,27 +8,51 @@
       <!-- DIV ENGLOBANT LA CARD DE LA PREMIERE EQUIPE -->
       <div class="col-4 m-4" style="">
         <div class="card">
-          <p>Team 1</p>
+          <p><%= @team_one.name %></p>
           <div class="mx-auto" style="display:flex;">
-            <div class="cercle mx-1"></div>
-            <div class="cercle mx-1"></div>
+          <% @team_one.users.each do |user| %>
+            <div class="cercle mx-1">
+              <% if user.photo.attached? %>
+                <%= cl_image_tag user.photo.key, height: 40, width: 40, crop: :thumb, gravity: :face %>
+              <% else %>
+                <%= user.first_name %>
+              <% end %>
+            </div>
+          <% end %>
+          <% empty_spot = 3 - @team_one.participations.count %>
+          <% empty_spot.times do %>
             <div class="empty mx-1"></div>
+          <% end %>
           </div>
-          <p class="mx-auto">1 place restante</p>
-          <button type="button" class="btn btn-dark">Rejoindre sa team</button>
+          <p class="mx-auto"><%= empty_spot %> <%= 'place'.pluralize(empty_spot) %> <%= 'restante'.pluralize(empty_spot) %></p>
+          <% if @team_one.can_accept?(current_user) %>
+            <%= link_to "Join the team", team_participations_path(@team_one), class: 'btn btn-dark', data: {turbo_method: :post} %>
+          <% end %>
         </div>
       </div>
       <!-- DIV ENGLOBANT LA CARD DE LA DEUXIEME EQUIPE -->
       <div class="col-4 m-4">
         <div class="card">
-          <p>Team 2</p>
+          <p><%= @team_two.name %></p>
           <div class="mx-auto" style="display:flex;">
-            <div class="cercle mx-1"></div>
+          <% @team_two.users.each do |user| %>
+            <div class="cercle mx-1">
+              <% if user.photo.attached? %>
+                <%= cl_image_tag user.photo.key, height: 40, width: 40, crop: :thumb, gravity: :face %>
+              <% else %>
+                <%= user.first_name %>
+              <% end %>
+            </div>
+          <% end %>
+          <% empty_spot = 3 - @team_two.participations.count %>
+          <% empty_spot.times do %>
             <div class="empty mx-1"></div>
-            <div class="empty mx-1"></div>
+          <% end %>
           </div>
-          <p class="mx-auto">2 places restantes</p>
-          <button type="button" class="btn btn-dark">Rejoindre sa team</button>
+          <p class="mx-auto"><%= empty_spot %> <%= 'place'.pluralize(empty_spot) %> <%= 'restante'.pluralize(empty_spot) %></p>
+          <% if @team_two.can_accept?(current_user) %>
+            <%= link_to "Join the team", team_participations_path(@team_two), class: 'btn btn-dark', data: {turbo_method: :post} %>
+          <% end %>
         </div>
       </div>
     </div>
@@ -102,6 +126,5 @@
 <%= link_to "delete this match", match_path(@match), data: {turbo_method: :delete} %>
 <%= link_to "update this match", edit_match_path(@match)%>
 <% end %>
-
-<%= link_to "JOIN THE GAME", recap_path(@match)%>
+  <%= link_to "JOIN THE GAME", recap_path(@match) %>
 -->
