@@ -5,6 +5,19 @@
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
+  border-radius: 1rem;
+
+  p {
+    font-size: 1rem;
+  }
+
+  i {
+    font-size: 12px;
+  }
+
+  input .submit {
+    background-color: #F8775B;
+  }
 
   h1 {
     border-bottom: 1px solid $gray-200;

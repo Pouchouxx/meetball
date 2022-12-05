@@ -23,9 +23,25 @@
     <br/>
    <%= f.input :comment %>
     <%= f.input :level_rating, collection: Match::DIFFICULTY, class:"mb-3" %>
+
     <div class="orange-btn">
       <%= f.button :submit, "Create a game" %>
     </div>
   </div>
 </div>
 <% end %>
+
+<%#
+<select class="star-rating">
+    <option value="">Select a rating</option>
+    <option value="3">NBA</option>
+    <option value="2">Pro A</option>
+    <option value="1">Distric</option>
+</select>
+<link href="css/star-rating.css" rel="stylesheet">
+
+
+<script src="js/star-rating.js"></script>
+<script>
+    var stars = new StarRating('.star-rating');
+</script> %>
