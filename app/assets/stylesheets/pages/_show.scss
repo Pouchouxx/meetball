@@ -1,12 +1,6 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  position: initial;
-  top: 0;
-  z-index: 1;
-}
 html,body {
   height:100%;
-  min-height:100%;
+  //min-height:100%;
  }
 .quarter{
   width:50%;
@@ -14,7 +8,7 @@ html,body {
   float:left;
 }
 .contents{
-  height:327px;
+  height:47%;
   width:100%;
 }
 .cercle{
@@ -55,7 +49,12 @@ html,body {
   color:orange;
 }
 .blockquote{
-  font-size:30px;
+  font-size:26px;
+  text-align: center;
+  vertical-align: middle;
+}
+.blockquote-footer{
+  text-align: center;
 }
 .part-three-comment{
   color:white;
@@ -155,4 +154,25 @@ a.ctaa:hover path.two {
     100% {
         fill: white;
     }
+}
+@media only screen and (max-width: 1300px) {
+  .address h4 {
+    font-size:20px;
+  }
+  .date-match p{
+    color: orange;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .address h4 {
+    font-size:16px;
+  }
+  .date-match p{
+    font-size:16px;
+  }
+}
+@media only screen and (max-height: 850px) {
+  .contents{
+    height: 45.4%;
+  }
 }
