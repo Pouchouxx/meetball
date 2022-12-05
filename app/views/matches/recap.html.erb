@@ -6,7 +6,7 @@
 
         <div class="col-6">
           <div class="recap-team-card">
-            <p><%= @team_one.name %></p>
+            <h4><%= @team_one.name.capitalize %></h4>
             <% @team_one.users.each do |user| %>
               <div class="cercle mx-1">
                 <% if user.photo.attached? %>
@@ -20,13 +20,13 @@
             <% empty_spot.times do %>
               <div class="empty mx-1"></div>
             <% end %>
-            <p class="mx-auto"><%= empty_spot %> <%= 'place'.pluralize(empty_spot) %> <%= 'restante'.pluralize(empty_spot) %></p>
+
           </div>
         </div>
 
         <div class="col-6">
           <div class="recap-team-card">
-            <p><%= @team_two.name %></p>
+            <h4><%= @team_two.name.capitalize %></h4>
             <% @team_two.users.each do |user| %>
               <div class="cercle mx-1">
                 <% if user.photo.attached? %>
@@ -40,7 +40,6 @@
             <% empty_spot.times do %>
               <div class="empty mx-1"></div>
             <% end %>
-            <p class="mx-auto"><%= empty_spot %> <%= 'place'.pluralize(empty_spot) %> <%= 'restante'.pluralize(empty_spot) %></p>
           </div>
         </div>
 
