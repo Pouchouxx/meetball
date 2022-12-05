@@ -9,11 +9,15 @@
         </label>
         <label>
           Difficulty:
-          <%= f.select :level_rating, ["Any", ["District", 1], ["Pro A", 2], ["NBA", 3]] %>
+          <%= f.select :level_rating, ["Any", ["District", 1], ["Pro A", 2], ["NBA", 3]], selected: params[:level_rating] %>
         </label>
         <label>
           Arrondissement:
-          <%= f.select :address, ["Any", ["1er", '75001'], ["2ème", '75002'], ["3ème", '75003'], ["4ème", '75004'], ["5ème", '75005'], ["6ème", '75006'], ["7ème", '75007'], ["8ème", '75008'], ["9ème", '75009'], ["10ème", '75010,'], ["11ème", '75011,'], ["12ème", '75012'], ["13ème", '75013'], ["14ème", '75014,'], ["15ème", '75015'], ["16ème", '75016'], ["17ème", '75017'], ["18ème", '75018'], ["19ème", '75019'], ["20ème", '75020']] %>
+          <%= f.select :address, ["Any", ["1er", '75001'], ["2ème", '75002'], ["3ème", '75003'], ["4ème", '75004'], ["5ème", '75005'], ["6ème", '75006'], ["7ème", '75007'], ["8ème", '75008'], ["9ème", '75009'], ["10ème", '75010,'], ["11ème", '75011,'], ["12ème", '75012'], ["13ème", '75013'], ["14ème", '75014,'], ["15ème", '75015'], ["16ème", '75016'], ["17ème", '75017'], ["18ème", '75018'], ["19ème", '75019'], ["20ème", '75020']], selected: params[:address] %>
+        </label>
+        <label>
+          Date:
+          <%= f.select :date, ["Anyday", "Today", "Tomorrow", "This week", "Next week"], selected: params[:date] %>
         </label>
         <%= f.submit 'Apply filters' %>
       <% end %>

@@ -12,6 +12,16 @@ class MatchesController < ApplicationController
       @matches = @matches.near(params[:address], 1)
     end
 
+    if params[:date] && params[:date] == "Today"
+      @matches = @matches.where(date: (Time.current..Time.current.end_of_day))
+    elsif params[:date] && params[:date] == "Tomorrow"
+      @matches = @matches.where(date: (Time.current.next_day.beginning_of_day..Time.current.next_day.end_of_day))
+    elsif params[:date] && params[:date] == "This week"
+      @matches = @matches.where(date: (Time.current..Time.current.next_day(7).end_of_day))
+    elsif params[:date] && params[:date] == "Next week"
+      @matches = @matches.where(date: (Time.current.next_day(7).end_of_day..Time.current.next_day(14).end_of_day))
+    end
+
     if params[:free_slots]
       @matches = @matches.all_available
     end
@@ -30,7 +40,6 @@ class MatchesController < ApplicationController
     @match = Match.find(params[:id])
     @team_one = @match.teams.first
     @team_two = @match.teams.last
-    raise
   end
 
   def new
