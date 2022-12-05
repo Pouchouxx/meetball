@@ -24,7 +24,7 @@ $title-text: 'Work Sans', sans-serif;
 .box{
   background: #fff;
   border-radius: 2.625rem;
-  box-shadow: 0 0 40px  rgba(255, 112, 67, 60%);
+  box-shadow: 0 0 40px  rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
   height: 35.25rem;
@@ -38,7 +38,7 @@ $title-text: 'Work Sans', sans-serif;
 .box-1{
   background: #fff;
   border-radius: 2.625rem;
-  box-shadow: 0 0 40px  rgba(255, 112, 67, 60%);
+  box-shadow: 0 0 40px  rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
   height: 44.25rem;
@@ -193,6 +193,8 @@ button:focus{
   background-color: #ff7143;
   border-radius: 1em;
   margin-bottom: 1rem;
+  transition: 0.3s;
+  margin-top: 40px;
   input {
     color: white;
   }
@@ -200,7 +202,6 @@ button:focus{
     border-color: #ff7143;
     color: #ff7143;
     background-color: white;
-    transition: 0,2ms;
     border-radius: 1em;
   }
 }

@@ -3,6 +3,7 @@
   position: sticky;
   top: 0;
   z-index: 1;
+  backdrop-filter: blur(3px);
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -34,4 +35,11 @@
 #meetball {
   width: 200px;
   object-fit: cover;
+}
+
+a.nav-link{
+  color: white;
+  font-size: larger;
+  border-radius: 1em;
+  margin-right: 10px;
 }
