@@ -7,7 +7,7 @@
         <div class="col-6">
             <!-- CARD -->
             <%= link_to match_path(match) do %>
-            <div class="card p-3 mb-3" style="background-size: cover; background-position: center; background-repeat: no-repeat; background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= Match::ADDRESSES[match.address] %>);">
+            <div class="card p-3 mb-3" style="background-size: cover; background-position: center; background-repeat: no-repeat; background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= Match::ADDRESSES[match.address] %>);">
                 <div class="d-flex justify-content-between">
                     <div class="d-flex flex-row align-items-center">
                         <div class="icon">
@@ -29,7 +29,11 @@
                     </div>
                 </div>
                 <div class="mt-5">
-                    <h3 class="heading bg-text size-text" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.2)"><%= match.address[0, 25] %>...<br><%= match.date %></h3>
+                  <div class="address">
+                    <h4 class="heading bg-text size-text" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.2)"><%= match.address.split(",").first %></h4>
+                    <h4 class="text-white" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.2)"><%= match.address.split(",").second %></h4>
+                  </div>
+                    <h5 class="date-match"><p>Le <b><%= match.date.strftime('%d/%m') %> à <%= match.date.strftime('%H:%M') %></b> (in <%= distance_of_time_in_words(Time.now, match.date) %>)</p></h5>
                     <div class="mt-5">
                         <div class="progress">
                             <div class="progress-bar bg-text" role="progressbar" style="width:<%=match.percentage%>%" aria-valuenow="<%=match.percentage%>" aria-valuemin="0" aria-valuemax="100"></div>
