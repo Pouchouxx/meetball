@@ -16,10 +16,6 @@ $title-text: 'Work Sans', sans-serif;
   height: 100vh;
   justify-content: center;
   margin: auto;
-}
-
-.form{
-  background: $grey;
   font-family: $title-text;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -38,6 +34,23 @@ $title-text: 'Work Sans', sans-serif;
   padding: 25px;
   margin-bottom: 7%;
 }
+
+.box-1{
+  background: #fff;
+  border-radius: 2.625rem;
+  box-shadow: 0 0 40px  rgba(255, 112, 67, 60%);
+  display: flex;
+  flex-direction: column;
+  height: 44.25rem;
+  position: absolute;
+  width: 31.75rem;
+  padding: 10 rem;
+  padding: 25px;
+  margin-bottom: 7%;
+}
+
+
+
 
 .logo,
 .signin,

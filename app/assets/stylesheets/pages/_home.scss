@@ -28,3 +28,22 @@ a {
 a:hover {
   color: black;
 }
+
+.bg {
+  width: 100%;
+  background-size: 300% 300%;
+  background-image: linear-gradient(
+        -45deg,
+        rgba(255,113,67,1) 0%,
+        rgba(255,113,67,1) 25%,
+        rgba(244,162,64,1) 51%,
+        rgba(255,53,127,1) 100%
+  );
+  animation: AnimateBG 20s ease infinite;
+}
+
+@keyframes AnimateBG {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
