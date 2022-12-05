@@ -1,11 +1,17 @@
 class MatchesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index ]
   def index
-    if params[:free_slots]
-      @matches = Match.all_available
-    else
-      @matches = Match.all
+    @matches = Match.all
+
+    if params[:level_rating] && params[:level_rating] != "Any"
+      @matches = @matches.where(level_rating: params[:level_rating])
     end
+
+    if params[:free_slots]
+      @matches = @matches.all_available
+    end
+
+
     @markers = @matches.map do |match|
       {
         lat: match.latitude,
@@ -21,6 +27,7 @@ class MatchesController < ApplicationController
     @match = Match.find(params[:id])
     @team_one = @match.teams.first
     @team_two = @match.teams.last
+    raise
   end
 
   def new

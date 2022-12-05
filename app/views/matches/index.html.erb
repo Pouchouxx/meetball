@@ -7,7 +7,11 @@
           <%= f.check_box :free_slots, {}, true, false %>
           Hide full games
         </label>
-        <%= f.submit 'search' %>
+        <label>
+          Difficulty:
+          <%= f.select :level_rating, ["Any", ["District", 1], ["Pro A", 2], ["NBA", 3]] %>
+        </label>
+        <%= f.submit 'Apply filters' %>
       <% end %>
       <!-- ITERATION AUTOUR DE CHAQUE MATCH -->
       <% @matches.each do |match| %>
