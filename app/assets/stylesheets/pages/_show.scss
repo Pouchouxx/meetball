@@ -145,3 +145,30 @@ a.ctaa:hover path.two {
         fill: white;
     }
 }
+
+// bouton qui ramene a l'index
+
+.button a span{
+  position: absolute;
+
+  display: inline-block;
+  background: #0e1538;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  border: 1px solid #040a29;
+  overflow: hidden;
+}
+.button a span::before{
+content:'';
+  position: absolute;
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.075);
+    transform: skew(25deg)
+}

@@ -5,6 +5,7 @@
       <div class="row">
 
         <div class="col-6">
+          <%# card de la team 1 %>
           <div class="recap-team-card">
             <p><%= @team_one.name %></p>
             <% @team_one.users.each do |user| %>
@@ -23,10 +24,10 @@
             <p class="mx-auto"><%= empty_spot %> <%= 'place'.pluralize(empty_spot) %> <%= 'restante'.pluralize(empty_spot) %></p>
           </div>
         </div>
-
+            <%# card de la team 2 %>
         <div class="col-6">
           <div class="recap-team-card">
-            <p><%= @team_one.name %></p>
+            <p><%= @team_two.name %></p>
             <% @team_one.users.each do |user| %>
               <div class="cercle mx-1">
                 <% if user.photo.attached? %>
@@ -46,15 +47,23 @@
 
       </div>
       <div class="row">
+      <div class="button">
+    <%= link_to matches_path, class:"ctb" do  %>
+      <%# <p>les idées que j'oublie en vrai la fatigue tu connais</p> %>
+      <span>Button</span>
+      </a>
+      </a>
+    </div>
+    <% end %>
         <%# Ajouter ce que tu veux  %>
       </div>
     </div>
     <div class="col-4">
-      <div class="chatroom">
+      <div class="chatroom"
+          data-controller="match-subscription"
+          data-match-subscription-match-id-value="<%= @match.id %>">
         <h1><%= @match.teams.name %></h1>
         <div class="messages" data-match-subscription-target="messages"
-          data-controller="match-subscription"
-          data-match-subscription-match-id-value="<%= @match.id %>"
         >
           <% @match.messages.each do |message| %>
             <%= render "messages/message", message: message %>

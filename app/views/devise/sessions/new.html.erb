@@ -1,3 +1,5 @@
+<div class="box">
+
 <h2>Log in</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
@@ -18,11 +20,12 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
 
 
 
 
-<div class="box">
+<%# <div class="box">
   <img class="logo" alt="dribble-logo" src="https://cdn-icons-png.flaticon.com/512/889/889455.png" />
   <p class="signin">Sign in</p>
   <p class="signin-text">Login with Twitter, Facebook,<br/> Google or:</p>
@@ -37,4 +40,4 @@
   <button>Sign In</button>
   <p class="foot-txt">Forgot your password?</p>
   <p class="foot-txt">Not a memeber? <span class="bold">Sign up now</p>
-</div>
+</div> %>
