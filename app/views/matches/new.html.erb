@@ -1,6 +1,6 @@
 
 <div class="form">
-  <div class="box">
+  <div class="box-1">
     <img class="logo" alt="dribble-logo" src="https://cdn-icons-png.flaticon.com/512/889/889455.png" />
         <p class="signin">New Game</p>
          <p class="signin-text">Choose your playground, your level and the date!</p>
@@ -22,8 +22,10 @@
             } %>
     <br/>
    <%= f.input :comment %>
-    <%= f.input :level_rating, collection: Match::DIFFICULTY %>
-    <%= f.submit%>
+    <%= f.input :level_rating, collection: Match::DIFFICULTY, class:"mb-3" %>
+    <div class="orange-btn">
+      <%= f.button :submit, "Create a game" %>
+    </div>
   </div>
 </div>
 <% end %>

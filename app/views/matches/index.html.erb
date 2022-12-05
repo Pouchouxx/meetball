@@ -1,6 +1,6 @@
 <!-- DIV ENGLOBANT LES CARDS ET LA MAP -->
 <div class="d-flex home">
-  <div class="flex-fill container-fluid mx-3 mt-4 col-8">
+  <div class="flex-fill container-fluid mx-3 col-8">
     <div class="row">
       <!-- ITERATION AUTOUR DE CHAQUE MATCH -->
       <% @matches.each do |match| %>
@@ -45,12 +45,12 @@
   </div>
 
 <!-- MAPBOX AVEC TERRAINS -->
-<div class="flex-fill container-fluid mt-4 mb-3 me-3 col-4 bg-map">
-<div style="width: 100%; height: calc(100vh - 66px - 1.5em); position: sticky; top: calc(66px + 1.5em);"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-</div>
-</div>
+    <div class="flex-fill container-fluid  mb-3 me-3 col-4 bg-map">
+    <div id="map"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+    </div>
+    </div>
 
 </div>
