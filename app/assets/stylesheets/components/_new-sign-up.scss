@@ -1,0 +1,54 @@
+.button{
+  border: solid 1px black;
+}
+
+.bo{
+  display: flex;
+  justify-content: space-between;
+  // justify-content: space-between;
+  // background-image: url(gege.png);
+}
+.container-showuser{
+  display: flex;
+  align-content: center;
+  text-align: center;
+
+}
+.signup{
+  display: flex;
+  align-items: center;
+}
+.box-2{
+  background: #fff;
+  border-radius: 2.625rem;
+  box-shadow: 0 0 40px #ff7043;
+  flex-direction: column;
+  height: 40.25rem;
+  width: 31.75rem;
+  padding: 2rem;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.orange-btn {
+  font-size: x-large;
+  border: solid 2px;
+  width: 100%;
+  background-color: #ff7143;
+  border-radius: 1em;
+  margin-bottom: 1rem;
+  input {
+    color: white;
+  }
+  &:hover  {
+    border-color: #ff7143;
+    color: #ff7143;
+    background-color: white;
+    transition: 0,2ms;
+    border-radius: 1em;
+  }
+}
+
+.form-label {
+  margin-bottom: 0.4rem !important;
+}
