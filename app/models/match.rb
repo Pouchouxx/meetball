@@ -48,12 +48,10 @@ class Match < ApplicationRecord
       "PRO A"
     when 3
       "NBA"
-
     else
 
     end
   end
-
 
   def max_per_match
     6
@@ -63,6 +61,14 @@ class Match < ApplicationRecord
     (participations.count / max_per_match.to_f)*100
   end
 
+  def full?
+    participations.count == max_per_match
+  end
+
+  def self.all_available
+    all.reject(&:full?)
+    # Match.all.reject { |match| match.full? }
+  end
 
   private
 
