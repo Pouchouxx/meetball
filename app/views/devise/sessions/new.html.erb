@@ -1,26 +1,31 @@
+
 <div class="box">
 
 <h2>Log in</h2>
 
+
+<div class="box col-4 offset-4 mt-5 ">
+  <img class="logo" alt="dribble-logo" src="https://cdn-icons-png.flaticon.com/512/889/889455.png" />
+  <p class="signin">Sign in</p>
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
   <div class="form-inputs">
     <%= f.input :email,
                 required: false,
                 autofocus: true,
                 input_html: { autocomplete: "email" } %>
+  <br/>
     <%= f.input :password,
                 required: false,
                 input_html: { autocomplete: "current-password" } %>
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
-
-  <div class="form-actions">
+    </div>
+  <div class="orange-btn">
     <%= f.button :submit, "Log in" %>
   </div>
 <% end %>
-
 <%= render "devise/shared/links" %>
 </div>
+
 
 
 
@@ -41,3 +46,10 @@
   <p class="foot-txt">Forgot your password?</p>
   <p class="foot-txt">Not a memeber? <span class="bold">Sign up now</p>
 </div> %>
+
+  <%# <input name="user" type="text" placeholder="Username or Email">
+  <input name="pass" type="password" placeholder="Password" required>
+  <button>Sign In</button>
+  <p class="foot-txt">Forgot your password?</p>
+  <p class="foot-txt">Not a memeber? <span class="bold">Sign up now</p> %>
+
