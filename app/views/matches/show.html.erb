@@ -59,15 +59,15 @@
   </div>
 
   <!-- SECTION PHOTO DU TERRAIN -->
-  <div class="col-md-6 quarter" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= Match::ADDRESSES[@match.address] %>);"></div>
+  <div class="col-md-6 quarter bg-image" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= Match::ADDRESSES[@match.address] %>);"></div>
 
   <!-- SECTION MESSAGE DE L'ORGANISATEUR -->
   <div class="col-md-6 quarter bgball part_three">
     <h4 class="p-3 part-three-text">Organizer's comment</h4>
 
     <!-- MISE EN FORME DU MESSAGE AVEC ASPECT CITATION BOOTSTRAP -->
-    <figure class="p-5 m-5">
-      <blockquote class="blockquote">
+    <figure class="message-orga">
+      <blockquote class="blockquote px-3">
         <p class="part-three-comment"><%= @match.comment %></p>
       </blockquote>
       <figcaption class="blockquote-footer">
