@@ -1,3 +1,9 @@
+.navbar-lewagon {
+  justify-content: space-between;
+  position: initial;
+  top: 0;
+  z-index: 1;
+}
 html,body {
   height:100%;
   min-height:100%;
@@ -8,7 +14,7 @@ html,body {
   float:left;
 }
 .contents{
-  height:50%;
+  height:327px;
   width:100%;
 }
 .cercle{
@@ -30,6 +36,11 @@ html,body {
   background-image: url("https://wallpapercave.com/wp/wp3694005.jpg");
   background-repeat: no-repeat;
   background-position: inherit
+}
+.bg-image{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .card{
   background-color:#FBEEDA;

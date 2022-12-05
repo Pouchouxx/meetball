@@ -13,6 +13,8 @@ body {
 .card {
   border: none;
   border-radius: 10px;
+  //border: 3px solid black;
+  box-shadow: 0 0 40px #ff7043;
 }
 
 .bg-image {
@@ -126,7 +128,7 @@ body {
 .date-match p{
   color: orange;
 }
-@media only screen and (max-width: 1279px) {
+@media only screen and (max-width: 1300px) {
   .address h4 {
     font-size:20px;
   }
