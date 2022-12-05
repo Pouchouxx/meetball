@@ -1,5 +1,6 @@
 class MatchesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index ]
+  skip_before_action :authenticate_user!, only: [:index]
+
   def index
     @matches = Match.all
 
@@ -7,10 +8,13 @@ class MatchesController < ApplicationController
       @matches = @matches.where(level_rating: params[:level_rating])
     end
 
+    if params[:address] && params[:address] != "Any"
+      @matches = @matches.near(params[:address], 1)
+    end
+
     if params[:free_slots]
       @matches = @matches.all_available
     end
-
 
     @markers = @matches.map do |match|
       {
@@ -18,7 +22,6 @@ class MatchesController < ApplicationController
         lng: match.longitude,
         info_window: render_to_string(partial: "info_window", locals: {match: match}),
         image_url: helpers.asset_url("889455.png")
-
       }
     end
   end
