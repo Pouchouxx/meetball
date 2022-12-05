@@ -2,6 +2,13 @@
 <div class="d-flex home">
   <div class="flex-fill container-fluid mx-3 mt-4 col-8">
     <div class="row">
+      <%= form_with url: matches_path, method: :get do |f| %>
+        <label>
+          <%= f.check_box :free_slots, {}, true, false %>
+          Hide full games
+        </label>
+        <%= f.submit 'search' %>
+      <% end %>
       <!-- ITERATION AUTOUR DE CHAQUE MATCH -->
       <% @matches.each do |match| %>
         <div class="col-6">

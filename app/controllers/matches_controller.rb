@@ -1,8 +1,12 @@
 class MatchesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index ]
   def index
-    @matches = Match.all
-    @markers = @matches.geocoded.map do |match|
+    if params[:free_slots]
+      @matches = Match.all_available
+    else
+      @matches = Match.all
+    end
+    @markers = @matches.map do |match|
       {
         lat: match.latitude,
         lng: match.longitude,
