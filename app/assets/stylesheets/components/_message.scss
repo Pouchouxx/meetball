@@ -8,13 +8,30 @@
   max-width: 400px;
   border-radius: 4px;
   padding: 8px;
-  min-height: 80px;
+
 }
 
 .sender-style {
-  background-color: lightcoral;
+  background-color: coral;
 }
 
 .receiver-style {
-  background-color: lightblue;
+  background-color: rgba(244,162,64,1);
+  box-shadow: 1px 1px 4px rgba(0,0,0,20%);
+  position:relative;
+  padding: 10px 26px 12px 26px;
+
+  .chat-avatar {
+    border-radius: 50px;
+    position: absolute;
+    top: -17px;
+    right: 186px;
+    box-shadow: 2px 3px 23px grey;
+  }
+
+  i{
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+  }
 }
