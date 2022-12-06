@@ -3,45 +3,50 @@
   <div class="row">
     <div class="col-8">
       <div class="row">
-
-        <div class="col-6">
+        <div class="column">
+        <div class="col-12">
           <div class="recap-team-card">
             <h4><%= @team_one.name.capitalize %></h4>
-            <% @team_one.users.each do |user| %>
-              <div class="cercle mx-1">
-                <% if user.photo.attached? %>
-                  <%= cl_image_tag user.photo.key, height: 40, width: 40, crop: :thumb, gravity: :face %>
-                <% else %>
-                  <%= user.first_name %>
-                <% end %>
-              </div>
-            <% end %>
-            <% empty_spot = 3 - @team_one.participations.count %>
-            <% empty_spot.times do %>
-              <div class="empty mx-1"></div>
-            <% end %>
-
+            <div class="player-avatar">
+              <% @team_one.users.each do |user| %>
+                <div class="cercle mx-1">
+                  <% if user.photo.attached? %>
+                    <%= cl_image_tag user.photo.key, height: 40, width: 40, crop: :thumb, gravity: :face %>
+                  <% else %>
+                    <%= user.first_name %>
+                  <% end %>
+                </div>
+              <% end %>
+              <% empty_spot = 3 - @team_one.participations.count %>
+              <% empty_spot.times do %>
+                <div class="empty mx-1"></div>
+              <% end %>
+            </div>
           </div>
         </div>
 
-        <div class="col-6">
+        <div class="col-12">
           <div class="recap-team-card">
             <h4><%= @team_two.name.capitalize %></h4>
-            <% @team_two.users.each do |user| %>
-              <div class="cercle mx-1">
-                <% if user.photo.attached? %>
-                  <%= cl_image_tag user.photo.key, height: 40, width: 40, crop: :thumb, gravity: :face %>
-                <% else %>
-                  <%= user.first_name %>
-                <% end %>
-              </div>
-            <% end %>
-            <% empty_spot = 3 - @team_two.participations.count %>
-            <% empty_spot.times do %>
-              <div class="empty mx-1"></div>
-            <% end %>
+            <div class="player-avatar">
+              <% @team_two.users.each do |user| %>
+                <div class="cercle mx-1">
+                  <% if user.photo.attached? %>
+                    <%= cl_image_tag user.photo.key, height: 40, width: 40, crop: :thumb, gravity: :face %>
+                  <% else %>
+                    <%= user.first_name %>
+                  <% end %>
+                </div>
+              <% end %>
+              <% empty_spot = 3 - @team_two.participations.count %>
+              <% empty_spot.times do %>
+                <div class="empty mx-1"></div>
+              <% end %>
+            </div>
           </div>
         </div>
+      </div>
+
 
       </div>
       <div class="row">
