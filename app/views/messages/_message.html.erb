@@ -1,8 +1,12 @@
 <div id="message-<%= message.id %>">
   <small>
   <div class="d-flex align-items-center">
- <%= cl_image_tag message.user.photo.key, height: 40, width: 40, crop: :thumb, gravity: :face, style:"border-radius: 50px"%> <p class="mb-0"><%=message.content.capitalize%></p>
-</div>
+    <% if !message.user.photo.key.nil? %>
+      <%= cl_image_tag message.user.photo.key, height: 40, width: 40, crop: :thumb, gravity: :face, style:"border-radius: 50px"%> <p class="mb-0"><%=message.content.capitalize%></p>
+    <% else %>
+      <%= image_tag "http://4.bp.blogspot.com/_R0Rc6mb8H6E/S1TTZJCtq8I/AAAAAAAAC9A/a50aYOK5o0o/w1200-h630-p-k-no-nu/design-fetish-no-photo-facebook-1.jpg", style: "height: 40px; width: 40px; border-radius: 50px;" %>
+    <% end %>
+  </div>
   </small>
     <i><%= message.created_at.strftime("at %l:%M %p") %></i>
 </div>
