@@ -11,9 +11,9 @@
                       }
                     } do |f| %>
             <br/>
-            <%= f.input :address, collection: Match::ADDRESSES.keys %>
+            <%= f.input :address, :label => "Choose your Playground", collection: Match::ADDRESSES.keys%>
             <br>
-            <%= f.input :date,
+            <%= f.input :date,:label => "When do you want to play",
             as: :string,
                     input_html: {
                       data: {
@@ -22,9 +22,9 @@
                     }
             %>
             <br/>
-            <%= f.input :comment %>
+            <%= f.input :comment, :label => "Put your message here" %>
 
-            <%= f.input :category,
+            <%= f.input :level_rating, :label => "Choose your difficulty",
                     as: :radio_buttons,
                     collection_wrapper_tag: 'div',
                     collection_wrapper_class: 'category-wrapper',

@@ -1,28 +1,33 @@
 .chatroom {
-  background: white;
-  height: calc(100vh - 75px);
+  height: calc(100vh - 136px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
   border-radius: 1rem;
+  border: solid 3px;
+  background-color: linen;
+  border-bottom: solid 3px black;
 
   p {
     font-size: 1rem;
+    word-break: break-word;
   }
 
   i {
     font-size: 12px;
+
   }
 
   input .submit {
     background-color: #F8775B;
   }
 
-  h1 {
-    border-bottom: 1px solid $gray-200;
+  h3 {
+    border-bottom: 3px solid black;
     margin-bottom: 0;
     padding: 1rem;
+    text-align: center;
   }
 
   .messages {
@@ -31,12 +36,50 @@
     padding: 1rem;
   }
 
+  .sender-style {
+    box-shadow: 1px 1px 4px rgba(0,0,0,20%);
+    position:relative;
+    background-color: salmon;
+    padding: 10px 26px 12px 26px;
+
+    .chat-avatar {
+      border-radius: 50px;
+      position: absolute;
+      top: -15px;
+      right: -14px;
+      box-shadow: 2px 3px 23px grey;
+    }
+
+    i{
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    }
+  }
+
   #new_message {
-    border-top: 1px solid $gray-200;
-    padding: 1rem;
+    border-top: 3px solid black;
+    padding: 0;
+    margin-bottom: none;
+    height: 45px;
 
     .form-group {
       margin-bottom: 0;
     }
+
+    #message_content{
+    border-bottom-left-radius: 15px;
+    margin: 0;
+    padding: 8px;
+    }
+  }
+
+  .btn-primary{
+    padding: 0;
+    margin-bottom: 0;
+    width: 7em;
+    margin: 0px;
+    height: 100%;
+    border-bottom-right-radius: 12px;
   }
 }

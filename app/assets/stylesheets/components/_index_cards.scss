@@ -118,14 +118,6 @@ body {
   color: orange;
 }
 
-.recap-team-card {
-  background-color: #FBEEDA;
-  padding: 10px;
-  border-radius: 10px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
 .date-match p{
   color: orange;
 }
@@ -144,4 +136,20 @@ body {
   .date-match p{
     font-size:16px;
   }
+}
+.filtersubmit{
+  width: 100%;
+}
+button, [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+  width: 90%;
+}
+span:nth-child(2) {
+  position: relative;
+  top: 12%;
+}
+.filter-form{
+  color: white;
+  margin-left: 40px;
+  margin-top: 20px;
 }

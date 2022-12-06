@@ -11,6 +11,8 @@ $white: #fff;
 $title-text: 'Work Sans', sans-serif;
 
 .form{
+  position: relative;
+  z-index: 1;
   align-items: center;
   display: flex;
   height: 100vh;
@@ -193,7 +195,7 @@ button:focus{
   border-radius: 1em;
   margin-bottom: 1rem;
   transition: 0.3s;
-  margin-top: 40px;
+  margin-top: 20px;
   input {
     color: white;
   }
@@ -202,5 +204,12 @@ button:focus{
     color: #ff7143;
     background-color: white;
     border-radius: 1em;
+  }
+
+
+  #new_match{
+    .match_date, .match_address{
+    margin: none;
+   }
   }
 }
