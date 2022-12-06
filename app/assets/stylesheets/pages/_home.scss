@@ -42,11 +42,6 @@ a:hover {
   animation: AnimateBG 20s ease infinite;
 }
 
-.bg .bg-home {
-  width: 100%;
-  background-size: 300% 300%;
-}
-
 @keyframes AnimateBG {
   0%{background-position:0% 50%}
   50%{background-position:100% 50%}
