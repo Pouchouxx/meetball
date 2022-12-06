@@ -60,7 +60,7 @@
           data-controller="match-subscription"
           data-match-subscription-match-id-value="<%= @match.id %>"
           data-match-subscription-current-user-id-value="<%= current_user.id %>">
-        <h1><%= @match.teams.name %></h1>
+        <h3><%= "Discuss about the match"  %></h3>
         <div class="messages" data-match-subscription-target="messages"
         >
           <% @match.messages.each do |message| %>
