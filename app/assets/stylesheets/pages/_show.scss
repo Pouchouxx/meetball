@@ -153,6 +153,67 @@ a.ctaa:hover path.two {
     animation: color_anim 1s infinite 0.4s;
 }
 
+.category-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.category-item {
+  flex: 0 0 30%;
+}
+
+.category-selector {
+  position: absolute;
+  transform: scale(0);
+}
+
+.category-selector + label {
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 10px 30px 10px;
+  border: 1px solid #EAEAEA;
+  border-radius: 16px;
+  background-color: white;
+}
+
+.category-selector:checked + label {
+  color: white !important;
+}
+
+#match_category_district + label {
+  color: rgba(244,162,64,1);
+}
+
+#match_category_district:checked + label {
+  background-color:rgba(244,162,64,1);
+  border-color:rgba(244,162,64,1);
+}
+
+
+#match_category_pro_a + label {
+  color: rgba(255,113,67,1);
+}
+
+#match_category_pro_a:checked + label {
+  background-color:  rgba(255,113,67,1);
+  border-color: rgba(255,113,67,1);
+}
+
+
+#match_category_nba + label {
+  color:  rgba(255,53,127,1);
+}
+
+#match_category_nba:checked + label {
+  background-color:  rgba(255,53,127,1);
+  border-color:  rgba(255,53,127,1);
+}
+
 /* SVG animations */
 
 @keyframes color_anim {

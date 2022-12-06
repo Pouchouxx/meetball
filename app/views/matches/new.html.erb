@@ -10,26 +10,34 @@
                         controller: 'flatpickr'
                       }
                     } do |f| %>
-    <br/>
-    <%= f.input :address, collection: Match::ADDRESSES.keys %>
-      <br>
-  <%= f.input :date,
-    as: :string,
-            input_html: {
-              data: {
-                flatpickr_target: 'dateInput',
-              }
-            } %>
-    <br/>
-   <%= f.input :comment %>
-    <%= f.input :level_rating, collection: Match::DIFFICULTY, class:"mb-3" %>
+            <br/>
+            <%= f.input :address, collection: Match::ADDRESSES.keys %>
+            <br>
+            <%= f.input :date,
+            as: :string,
+                    input_html: {
+                      data: {
+                        flatpickr_target: 'dateInput',
+                      }
+                    }
+            %>
+            <br/>
+            <%= f.input :comment %>
 
-    <div class="orange-btn">
-      <%= f.button :submit, "Create a game" %>
-    </div>
-  </div>
-</div>
-<% end %>
+            <%= f.input :category,
+                    as: :radio_buttons,
+                    collection_wrapper_tag: 'div',
+                    collection_wrapper_class: 'category-wrapper',
+                    item_wrapper_class: 'category-item',
+                    input_html: {class: 'category-selector'},
+                    collection: Match::CATEGORIES%>
+
+            <div class="orange-btn">
+              <%= f.button :submit, "Create a game" %>
+            </div>
+          </div>
+        </div>
+        <% end %>
 
 <%#
 <select class="star-rating">
