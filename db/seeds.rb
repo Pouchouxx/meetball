@@ -15,7 +15,7 @@ user1 = User.new(
   last_name: "Pouchoux",
   pseudo: "Poucx"
 )
-file = URI.open("https://res.cloudinary.com/dsjung9mw/image/upload/v1669389845/production/2x0vu4zem26irt81ydfb04wr9si6.png")
+file = URI.open("https://res.cloudinary.com/dgcz6f1yu/image/upload/v1670325527/cld-sample-5.jpg")
 user1.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 user1.save!
 
@@ -26,7 +26,7 @@ user2 = User.new(
   last_name: "Irmiahu",
   pseudo: "LaFragilité"
 )
-file = URI.open("https://res.cloudinary.com/dsjung9mw/image/upload/v1669970721/development/ebk98qu6on313hzqitflssqgo4d2.jpg")
+file = URI.open("https://res.cloudinary.com/dgcz6f1yu/image/upload/v1670325502/samples/ecommerce/analog-classic.jpg")
 user2.photo.attach(io: file, filename: "jojo.png", content_type: "image/png")
 user2.save!
 
@@ -37,7 +37,7 @@ user3 = User.create!(
   last_name: "Aouane",
   pseudo: "Balisto"
 )
-file = URI.open("https://res.cloudinary.com/dsjung9mw/image/upload/v1669902672/development/oucp3z8pvfs5f46i5odp29d9yvzj.jpg")
+file = URI.open("https://res.cloudinary.com/dgcz6f1yu/image/upload/v1670325526/cld-sample-3.jpg")
 user3.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 user3.save!
 
@@ -48,7 +48,7 @@ user4 = User.create!(
   last_name: "Chipotel",
   pseudo: "JteCross"
 )
-file = URI.open("https://res.cloudinary.com/dsjung9mw/image/upload/v1669389941/production/zvvq6i101xiftemk9vd3tlmhdbua.jpg")
+file = URI.open("https://res.cloudinary.com/dgcz6f1yu/image/upload/v1670325526/cld-sample-2.jpg")
 user4.photo.attach(io: file, filename: "HugoC.png", content_type: "image/png")
 user4.save!
 
@@ -59,7 +59,7 @@ user5 = User.create!(
   last_name: "Assaf",
   pseudo: "GoatMPP"
 )
-file = URI.open("https://res.cloudinary.com/dsjung9mw/image/upload/v1669390045/production/biwfagztbju5u2b2pxdvskpstwj1.jpg")
+file = URI.open("https://res.cloudinary.com/dgcz6f1yu/image/upload/v1670325516/samples/landscapes/landscape-panorama.jpg")
 user5.photo.attach(io: file, filename: "Raph.png", content_type: "image/png")
 user5.save!
 
@@ -70,7 +70,7 @@ user6 = User.create!(
   last_name: "Midtbo",
   pseudo: "InYourFace"
 )
-file = URI.open("https://res.cloudinary.com/dsjung9mw/image/upload/v1669390047/production/nr757pejqyga3zcwhvn6wzxvrjet.jpg")
+file = URI.open("https://res.cloudinary.com/dgcz6f1yu/image/upload/v1670325514/samples/landscapes/nature-mountains.jpg")
 user6.photo.attach(io: file, filename: "Magnus.png", content_type: "image/png")
 user6.save!
 

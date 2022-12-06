@@ -2,20 +2,24 @@
 <h1><%= @user.email %></h1>
 <div class="container mt-3" >
   <div class="success">
-   <div class="card"><h2>Profile</h2>
+   <div class="card"><h2> <%= "Profile de #{current_user.pseudo}" %>  </h2>
       <div class="infos-user">
-        <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar-profile dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <% if current_user.photo.attached? %>
+                <%= cl_image_tag current_user.photo.key, crop: :fill, gravity: :face, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <% else %>
+                <%= image_tag "http://4.bp.blogspot.com/_R0Rc6mb8H6E/S1TTZJCtq8I/AAAAAAAAC9A/a50aYOK5o0o/w1200-h630-p-k-no-nu/design-fetish-no-photo-facebook-1.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <% end %>
        </div>
          <div class="align-circle">
-         <h3 class="circle one-line"> username</h3>
+         <h3 class="circle one-line"> <%= "#{current_user.first_name}#{current_user.last_name}"%></h3>
 
-          <h3 class="circle one-line">winrate</h3>
+          <h3 class="circle one-line"> <%= "#{current_user.first_name}" %></h3>
 
 
             <h3 class="circle one-line">Trophies</h3>
             </div>
 
-            <div class="bio-user"><h4> Bio</h4>
+            <div class="bio-user"><h4>Bio</h4>
               <p>Je jouais au basketball en club quand j'étais petit, j'ai un niveau correct, je jouais avec le fils de Lebron, si t'es un bon tu vois qui s'est.
             Bref j'ai hate de jouer avec vous !</p>
         </div>

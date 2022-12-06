@@ -9,10 +9,10 @@
             <h4><%= @team_one.name.capitalize %></h4>
             <% @team_one.users.each do |user| %>
               <div class="cercle mx-1">
-                <% if user.photo.attached? %>
+                <% if !user.photo.key.nil? %>
                   <%= cl_image_tag user.photo.key, height: 40, width: 40, crop: :thumb, gravity: :face %>
                 <% else %>
-                  <%= user.first_name %>
+                  <%= image_tag "http://4.bp.blogspot.com/_R0Rc6mb8H6E/S1TTZJCtq8I/AAAAAAAAC9A/a50aYOK5o0o/w1200-h630-p-k-no-nu/design-fetish-no-photo-facebook-1.jpg", style: "height: 40px; width: 40px; border-radius: 50px;" %>
                 <% end %>
               </div>
             <% end %>
@@ -29,10 +29,10 @@
             <h4><%= @team_two.name.capitalize %></h4>
             <% @team_two.users.each do |user| %>
               <div class="cercle mx-1">
-                <% if user.photo.attached? %>
+                <% if !user.photo.key.nil? %>
                   <%= cl_image_tag user.photo.key, height: 40, width: 40, crop: :thumb, gravity: :face %>
                 <% else %>
-                  <%= user.first_name %>
+                  <%= image_tag "http://4.bp.blogspot.com/_R0Rc6mb8H6E/S1TTZJCtq8I/AAAAAAAAC9A/a50aYOK5o0o/w1200-h630-p-k-no-nu/design-fetish-no-photo-facebook-1.jpg", style: "height: 40px; width: 40px; border-radius: 50px;" %>
                 <% end %>
               </div>
             <% end %>
