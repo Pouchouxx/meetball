@@ -186,34 +186,42 @@ a.ctaa:hover path.two {
   color: white !important;
 }
 
-#match_category_district + label {
+#match_level_rating_district + label {
   color: rgba(244,162,64,1);
 }
 
-#match_category_district:checked + label {
+#match_level_rating_district:checked + label {
   background-color:rgba(244,162,64,1);
   border-color:rgba(244,162,64,1);
 }
 
 
-#match_category_pro_a + label {
+#match_level_rating_pro_a + label {
   color: rgba(255,113,67,1);
 }
 
-#match_category_pro_a:checked + label {
+#match_level_rating_pro_a:checked + label {
   background-color:  rgba(255,113,67,1);
   border-color: rgba(255,113,67,1);
 }
 
 
-#match_category_nba + label {
+#match_level_rating_nba + label {
   color:  rgba(255,53,127,1);
 }
 
-#match_category_nba:checked + label {
+#match_level_rating_nba:checked + label {
   background-color:  rgba(255,53,127,1);
   border-color:  rgba(255,53,127,1);
 }
+
+label, legend {
+  abbr {
+    display: none;
+  }
+  
+}
+
 
 /* SVG animations */
 
