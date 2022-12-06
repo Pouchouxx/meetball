@@ -137,3 +137,17 @@ body {
     font-size:16px;
   }
 }
+.filtersubmit{
+  width: 100%;
+}
+button, [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+  width: 90%;
+}
+span:nth-child(2) {
+  position: relative;
+  top: 12%;
+}
+.filter-form{
+  color: white;
+}
