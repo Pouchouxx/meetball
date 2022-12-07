@@ -3,13 +3,13 @@
 
   <!-- SECTION TEAMS-->
   <div class="col-md-6 quarter part-one">
-    <h4 class="p-3">Join the team of your choice</h4>
+    <h4 class="p-3"> <strong>Join the team of your choice</strong> </h4>
     <!-- DIV PERMETTANT L'ALIGNEMENT DES 2 CARDS L'UNE A COTE DE L'AUTRE -->
-    <div class="" style="display:flex; align-items: center; justify-content: center;">
+    <div class="cards" style="display:flex; align-items: center; justify-content: center;">
       <!-- DIV ENGLOBANT LA CARD DE LA PREMIERE EQUIPE -->
       <div class="col-4 m-4" style="">
         <div class="card">
-          <p><%= @team_one.name %></p>
+          <h6><%= "#{@team_one.name}'s team" %></h6>
           <div class="mx-auto" style="display:flex;">
           <% @team_one.users.each do |user| %>
             <div class="cercle mx-1">
@@ -22,19 +22,24 @@
           <% end %>
           <% empty_spot = 3 - @team_one.participations.count %>
           <% empty_spot.times do %>
-            <div class="empty mx-1"></div>
+            <div class="empty mx-1">
+                <%= image_tag "http://4.bp.blogspot.com/_R0Rc6mb8H6E/S1TTZJCtq8I/AAAAAAAAC9A/a50aYOK5o0o/w1200-h630-p-k-no-nu/design-fetish-no-photo-facebook-1.jpg", style: "height: 40px; width: 40px; border-radius: 50px;" %>
+            </div>
           <% end %>
           </div>
           <p class="mx-auto"><%= empty_spot %> <%= 'spot'.pluralize(empty_spot) %> <%= 'left'.pluralize(empty_spot) %></p>
           <% if @team_one.can_accept?(current_user) %>
             <%= link_to "Join the team", team_participations_path(@team_one), class: 'orange-btn', data: {turbo_method: :post} %>
+            <% else %>
+            <i><%= "JOINED !!!" %></i>
           <% end %>
         </div>
+
       </div>
       <!-- DIV ENGLOBANT LA CARD DE LA DEUXIEME EQUIPE -->
       <div class="col-4 m-4">
         <div class="card">
-          <p><%= @team_two.name %></p>
+          <h6><%= "#{@team_two.name}'s team "%></h6>
           <div class="mx-auto" style="display:flex;">
           <% @team_two.users.each do |user| %>
             <div class="cercle mx-1">
@@ -47,12 +52,16 @@
           <% end %>
           <% empty_spot = 3 - @team_two.participations.count %>
           <% empty_spot.times do %>
-            <div class="empty mx-1"></div>
+            <div class="empty mx-1">
+                <%= image_tag "http://4.bp.blogspot.com/_R0Rc6mb8H6E/S1TTZJCtq8I/AAAAAAAAC9A/a50aYOK5o0o/w1200-h630-p-k-no-nu/design-fetish-no-photo-facebook-1.jpg", style: "height: 40px; width: 40px; border-radius: 50px;" %>
+            </div>
           <% end %>
           </div>
           <p class="mx-auto"><%= empty_spot %> <%= 'spot'.pluralize(empty_spot) %> <%= 'left'.pluralize(empty_spot) %></p>
           <% if @team_two.can_accept?(current_user) %>
             <%= link_to "Join the team", team_participations_path(@team_two), class: 'orange-btn', data: {turbo_method: :post} %>
+            <% else %>
+            <i><%= "JOINED !!!" %></i>
           <% end %>
         </div>
       </div>
@@ -72,18 +81,17 @@
         <p class="part-three-comment"><%= @match.comment %></p>
       </blockquote>
       <figcaption class="blockquote-footer">
-        <%= @match.user.first_name %> - <cite title="Source Title">NBA Legend</cite>
+        <%= @match.user.pseudo %> - <cite title="Source Title">NBA Legend</cite>
       </figcaption>
     </figure>
   </div>
 
   <!-- SECTION INFOS SUR LE MATCH-->
   <div class="col-md-6 quarter" style="background-color:black; color:white;">
-    <h4 class="p-3">Save the date</h4>
     <ul class="p-3 m-3">
       <li><h2 style="text-decoration:none; font-size:bold; color:#ffa502"><%= @match.date.strftime('%A %d %B') %> at <%= @match.date.strftime('%H') %>h</h2></li>
-      <li>Appointment: <%= @match.address %></li>
-      <li>Game level: <%= @match.category %></li>
+      <li><i class="fa-sharp fa-solid fa-location-dot"></i> <%= @match.address %></li>
+      <li><i class="fa-solid fa-trophy"></i> <%= @match.category %></li>
     </ul>
     <div class="wrapper">
   <%= link_to recap_path(@match), class:"ctaa" do  %>

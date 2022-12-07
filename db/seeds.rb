@@ -16,7 +16,7 @@ user1 = User.new(
   pseudo: "Poucx"
 )
 file = URI.open("https://res.cloudinary.com/dgcz6f1yu/image/upload/v1670402524/pouchoux_jqjj8l.jpg")
-user1.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+user1.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
 user1.save!
 
 user2 = User.new(
@@ -27,7 +27,7 @@ user2 = User.new(
   pseudo: "LaFragilité"
 )
 file = URI.open("https://res.cloudinary.com/dgcz6f1yu/image/upload/v1670402244/115413668_d3hkmb.jpg")
-user2.photo.attach(io: file, filename: "jojo.png", content_type: "image/png")
+user2.photo.attach(io: file, filename: "jojo.jpg", content_type: "image/jpg")
 user2.save!
 
 user3 = User.create!(
@@ -49,7 +49,7 @@ user4 = User.create!(
   pseudo: "JteCross"
 )
 file = URI.open("https://res.cloudinary.com/dgcz6f1yu/image/upload/v1670402664/Photo_test_exo_zqp5qy.jpg")
-user4.photo.attach(io: file, filename: "HugoC.png", content_type: "image/png")
+user4.photo.attach(io: file, filename: "HugoC.jpg", content_type: "image/jpg")
 user4.save!
 
 user5 = User.create!(
@@ -60,7 +60,7 @@ user5 = User.create!(
   pseudo: "GoatMPP"
 )
 file = URI.open("https://res.cloudinary.com/dgcz6f1yu/image/upload/v1670325568/k89spmqkfwheylrdttdqoaydjt1r.jpg")
-user5.photo.attach(io: file, filename: "Raph.png", content_type: "image/png")
+user5.photo.attach(io: file, filename: "Raph.jpg", content_type: "image/jpg")
 user5.save!
 
 user6 = User.create!(
@@ -71,7 +71,7 @@ user6 = User.create!(
   pseudo: "InYourFace"
 )
 file = URI.open("https://res.cloudinary.com/dgcz6f1yu/image/upload/v1670325569/86webcfa3iwjk2ntz2aoblo42i7l.jpg")
-user6.photo.attach(io: file, filename: "Magnus.png", content_type: "image/png")
+user6.photo.attach(io: file, filename: "Magnus.jpg", content_type: "image/jpg")
 user6.save!
 
 match1 = Match.create!(
