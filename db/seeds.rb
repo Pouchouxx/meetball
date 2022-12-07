@@ -15,7 +15,7 @@ user1 = User.new(
   last_name: "Pouchoux",
   pseudo: "Poucx"
 )
-file = URI.open("https://res.cloudinary.com/dgcz6f1yu/image/upload/v1670325527/cld-sample-5.jpg")
+file = URI.open("https://res.cloudinary.com/dgcz6f1yu/image/upload/v1670402524/pouchoux_jqjj8l.jpg")
 user1.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 user1.save!
 
@@ -26,7 +26,7 @@ user2 = User.new(
   last_name: "Irmiahu",
   pseudo: "LaFragilité"
 )
-file = URI.open("https://res.cloudinary.com/dgcz6f1yu/image/upload/v1670325502/samples/ecommerce/analog-classic.jpg")
+file = URI.open("https://res.cloudinary.com/dgcz6f1yu/image/upload/v1670402244/115413668_d3hkmb.jpg")
 user2.photo.attach(io: file, filename: "jojo.png", content_type: "image/png")
 user2.save!
 
@@ -37,7 +37,7 @@ user3 = User.create!(
   last_name: "Aouane",
   pseudo: "Balisto"
 )
-file = URI.open("https://res.cloudinary.com/dgcz6f1yu/image/upload/v1670325526/cld-sample-3.jpg")
+file = URI.open("https://res.cloudinary.com/dgcz6f1yu/image/upload/v1670402471/mario_fuwjlp.png")
 user3.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 user3.save!
 
@@ -48,7 +48,7 @@ user4 = User.create!(
   last_name: "Chipotel",
   pseudo: "JteCross"
 )
-file = URI.open("https://res.cloudinary.com/dgcz6f1yu/image/upload/v1670325526/cld-sample-2.jpg")
+file = URI.open("https://res.cloudinary.com/dgcz6f1yu/image/upload/v1670402664/Photo_test_exo_zqp5qy.jpg")
 user4.photo.attach(io: file, filename: "HugoC.png", content_type: "image/png")
 user4.save!
 
@@ -59,7 +59,7 @@ user5 = User.create!(
   last_name: "Assaf",
   pseudo: "GoatMPP"
 )
-file = URI.open("https://res.cloudinary.com/dgcz6f1yu/image/upload/v1670325516/samples/landscapes/landscape-panorama.jpg")
+file = URI.open("https://res.cloudinary.com/dgcz6f1yu/image/upload/v1670325568/k89spmqkfwheylrdttdqoaydjt1r.jpg")
 user5.photo.attach(io: file, filename: "Raph.png", content_type: "image/png")
 user5.save!
 
@@ -70,7 +70,7 @@ user6 = User.create!(
   last_name: "Midtbo",
   pseudo: "InYourFace"
 )
-file = URI.open("https://res.cloudinary.com/dgcz6f1yu/image/upload/v1670325514/samples/landscapes/nature-mountains.jpg")
+file = URI.open("https://res.cloudinary.com/dgcz6f1yu/image/upload/v1670325569/86webcfa3iwjk2ntz2aoblo42i7l.jpg")
 user6.photo.attach(io: file, filename: "Magnus.png", content_type: "image/png")
 user6.save!
 
