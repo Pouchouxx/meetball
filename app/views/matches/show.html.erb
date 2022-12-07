@@ -84,11 +84,11 @@
 
   <!-- SECTION INFOS SUR LE MATCH-->
   <div class="col-md-6 quarter" style="background-color:black; color:white;">
-    <h4 class="p-3">Save the date</h4>
+    <h4 class="p-3"><i class="fa-regular fa-calendar"></i> Save the date</h4>
     <ul class="p-3 m-3">
       <li><h2 style="text-decoration:none; font-size:bold; color:#ffa502"><%= @match.date.strftime('%A %d %B') %> at <%= @match.date.strftime('%H') %>h</h2></li>
-      <li>Appointment: <%= @match.address %></li>
-      <li>Game level: <%= @match.category %></li>
+      <li><i class="fa-sharp fa-solid fa-location-dot"></i> <%= @match.address %></li>
+      <li><i class="fa-solid fa-trophy"></i> <%= @match.category %></li>
     </ul>
     <div class="wrapper">
   <%= link_to recap_path(@match), class:"ctaa" do  %>
