@@ -41,13 +41,27 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-.card{
-  background-color:#FBEEDA;
-  .orange-btn {
-    text-align: center;
-    font-size: 1rem;
+
+.cards {
+  margin-top: -25px;
+    .card{
+      background-color:#FBEEDA;
+      min-height: 204px;
+    i {
+      text-align:center;
+      margin-top: 1em;
+    }
+    h6 {
+      text-align:center;
+      font-weight: bolder;
+    }
+      .orange-btn {
+        text-align: center;
+        font-size: 1rem;
+    }
   }
 }
+
 .part-one{
   background-color:orange;
 }

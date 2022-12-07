@@ -5,11 +5,11 @@
   <div class="col-md-6 quarter part-one">
     <h4 class="p-3">Join the team of your choice</h4>
     <!-- DIV PERMETTANT L'ALIGNEMENT DES 2 CARDS L'UNE A COTE DE L'AUTRE -->
-    <div class="" style="display:flex; align-items: center; justify-content: center;">
+    <div class="cards" style="display:flex; align-items: center; justify-content: center;">
       <!-- DIV ENGLOBANT LA CARD DE LA PREMIERE EQUIPE -->
       <div class="col-4 m-4" style="">
         <div class="card">
-          <p><%= @team_one.name %></p>
+          <h6><%= "#{@team_one.name}'s team" %></h6>
           <div class="mx-auto" style="display:flex;">
           <% @team_one.users.each do |user| %>
             <div class="cercle mx-1">
@@ -28,6 +28,8 @@
           <p class="mx-auto"><%= empty_spot %> <%= 'spot'.pluralize(empty_spot) %> <%= 'left'.pluralize(empty_spot) %></p>
           <% if @team_one.can_accept?(current_user) %>
             <%= link_to "Join the team", team_participations_path(@team_one), class: 'orange-btn', data: {turbo_method: :post} %>
+            <% else %>
+            <i><%= "JOINED !!!" %></i>
           <% end %>
         </div>
 
@@ -35,7 +37,7 @@
       <!-- DIV ENGLOBANT LA CARD DE LA DEUXIEME EQUIPE -->
       <div class="col-4 m-4">
         <div class="card">
-          <p><%= @team_two.name %></p>
+          <h6><%= "#{@team_two.name}'s team "%></h6>
           <div class="mx-auto" style="display:flex;">
           <% @team_two.users.each do |user| %>
             <div class="cercle mx-1">
@@ -54,6 +56,8 @@
           <p class="mx-auto"><%= empty_spot %> <%= 'spot'.pluralize(empty_spot) %> <%= 'left'.pluralize(empty_spot) %></p>
           <% if @team_two.can_accept?(current_user) %>
             <%= link_to "Join the team", team_participations_path(@team_two), class: 'orange-btn', data: {turbo_method: :post} %>
+            <% else %>
+            <i><%= "JOINED !!!" %></i>
           <% end %>
         </div>
       </div>
