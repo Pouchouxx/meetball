@@ -22,7 +22,9 @@
           <% end %>
           <% empty_spot = 3 - @team_one.participations.count %>
           <% empty_spot.times do %>
-            <div class="empty mx-1"></div>
+            <div class="empty mx-1">
+                <%= image_tag "http://4.bp.blogspot.com/_R0Rc6mb8H6E/S1TTZJCtq8I/AAAAAAAAC9A/a50aYOK5o0o/w1200-h630-p-k-no-nu/design-fetish-no-photo-facebook-1.jpg", style: "height: 40px; width: 40px; border-radius: 50px;" %>
+            </div>
           <% end %>
           </div>
           <p class="mx-auto"><%= empty_spot %> <%= 'spot'.pluralize(empty_spot) %> <%= 'left'.pluralize(empty_spot) %></p>
@@ -50,7 +52,9 @@
           <% end %>
           <% empty_spot = 3 - @team_two.participations.count %>
           <% empty_spot.times do %>
-            <div class="empty mx-1"></div>
+            <div class="empty mx-1">
+                <%= image_tag "http://4.bp.blogspot.com/_R0Rc6mb8H6E/S1TTZJCtq8I/AAAAAAAAC9A/a50aYOK5o0o/w1200-h630-p-k-no-nu/design-fetish-no-photo-facebook-1.jpg", style: "height: 40px; width: 40px; border-radius: 50px;" %>
+            </div>
           <% end %>
           </div>
           <p class="mx-auto"><%= empty_spot %> <%= 'spot'.pluralize(empty_spot) %> <%= 'left'.pluralize(empty_spot) %></p>
