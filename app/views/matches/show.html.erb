@@ -3,7 +3,7 @@
 
   <!-- SECTION TEAMS-->
   <div class="col-md-6 quarter part-one">
-    <h4 class="p-3">Join the team of your choice</h4>
+    <h4 class="p-3"> <strong>Join the team of your choice</strong> </h4>
     <!-- DIV PERMETTANT L'ALIGNEMENT DES 2 CARDS L'UNE A COTE DE L'AUTRE -->
     <div class="cards" style="display:flex; align-items: center; justify-content: center;">
       <!-- DIV ENGLOBANT LA CARD DE LA PREMIERE EQUIPE -->
@@ -77,14 +77,13 @@
         <p class="part-three-comment"><%= @match.comment %></p>
       </blockquote>
       <figcaption class="blockquote-footer">
-        <%= @match.user.first_name %> - <cite title="Source Title">NBA Legend</cite>
+        <%= @match.user.pseudo %> - <cite title="Source Title">NBA Legend</cite>
       </figcaption>
     </figure>
   </div>
 
   <!-- SECTION INFOS SUR LE MATCH-->
   <div class="col-md-6 quarter" style="background-color:black; color:white;">
-    <h4 class="p-3"><i class="fa-regular fa-calendar"></i> Save the date</h4>
     <ul class="p-3 m-3">
       <li><h2 style="text-decoration:none; font-size:bold; color:#ffa502"><%= @match.date.strftime('%A %d %B') %> at <%= @match.date.strftime('%H') %>h</h2></li>
       <li><i class="fa-sharp fa-solid fa-location-dot"></i> <%= @match.address %></li>
