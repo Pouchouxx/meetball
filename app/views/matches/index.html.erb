@@ -5,12 +5,12 @@
     <div id='demo' style='display: none'>
         <%= form_with url: matches_path, method: :get do |f| %>
       <div class="d-flex filter-form">
-        <!--
-        <label>
-          Hide full games&nbsp;
+
+        <label class="d-flex align-items-center">
+          <p class="hidegames">Hide full games&nbsp;</p>
           <%= f.check_box :free_slots, {}, true, false %>
         </label>
-        -->
+
         <label>
           Difficulty
           <%= f.select :level_rating, ["Any", ["District", 1], ["Pro A", 2], ["NBA", 3]], selected: params[:level_rating] %>
@@ -33,7 +33,7 @@
 
       <!-- ITERATION AUTOUR DE CHAQUE MATCH -->
       <% @matches.each do |match| %>
-        <div class="col-6">
+        <div class="col-6 index-matchs">
             <!-- CARD -->
             <%= link_to match_path(match) do %>
             <div class="card p-3 mb-3" style="background-size: cover; background-position: center; background-repeat: no-repeat; background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= Match::ADDRESSES[match.address] %>);">
