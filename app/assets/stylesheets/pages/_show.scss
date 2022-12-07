@@ -201,7 +201,7 @@ a.ctaa:hover path.two {
   color: white !important;
 }
 
-#match_level_rating_district + label {
+#match_level_rating_1+ label {
   color: rgba(244,162,64,1);
   &:hover{
     color: white;
@@ -211,7 +211,7 @@ a.ctaa:hover path.two {
   }
 }
 
-#match_level_rating_district:checked + label {
+#match_level_rating_1:checked + label {
   background-color:rgba(244,162,64,1);
   border-color:rgba(244,162,64,1);
   border: solid 1px black;
@@ -219,7 +219,7 @@ a.ctaa:hover path.two {
 }
 
 
-#match_level_rating_pro_a + label {
+#match_level_rating_2 + label {
   color: rgba(255,113,67,1);
   &:hover{
     color: white;
@@ -229,14 +229,14 @@ a.ctaa:hover path.two {
   }
 }
 
-#match_level_rating_pro_a:checked + label {
+#match_level_rating_2:checked + label {
   background-color:  rgba(255,113,67,1);
   border-color: rgba(255,113,67,1);
   border: solid 1px black;
 }
 
 
-#match_level_rating_nba + label {
+#match_level_rating_3 + label {
   color:  rgba(255,53,127,1);
   &:hover{
     color: white;
@@ -246,7 +246,7 @@ a.ctaa:hover path.two {
   }
 }
 
-#match_level_rating_nba:checked + label {
+#match_level_rating_3:checked + label {
   background-color:  rgba(255,53,127,1);
   border-color:  rgba(255,53,127,1);
   border: solid 1px black;
