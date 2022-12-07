@@ -9,6 +9,26 @@
   background-color: linen;
   border-bottom: solid 3px black;
 
+  .player-avatar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    .left-team .cercle {
+      margin-right: -15px !important;
+    }
+    .right-team .cercle {
+      margin-left: -15px !important;
+    }
+    .cercle {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      img {
+        margin-right: -10px;
+      }
+    }
+  }
+
   p {
     font-size: 1rem;
     word-break: break-word;
