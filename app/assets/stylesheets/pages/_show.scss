@@ -1,4 +1,3 @@
-
 .navbar-lewagon {
   justify-content: space-between;
   position: sticky;
@@ -8,11 +7,13 @@
 
 .quarter{
   width:50%;
-  height:100%;
+  height:50%;
   float:left;
 }
 .contents{
-  height:100%;
+  height:calc(100vh - 68px);
+  // width:100%;
+
 }
 .cercle{
   width: 40px;
@@ -41,6 +42,10 @@
 }
 .card{
   background-color:#FBEEDA;
+  .orange-btn {
+    text-align: center;
+    font-size: 1rem;
+  }
 }
 .part-one{
   background-color:orange;
@@ -172,6 +177,9 @@ a.ctaa:hover path.two {
   border: 1px solid #EAEAEA;
   border-radius: 16px;
   background-color: white;
+  padding: 1rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .category-selector:checked + label {
@@ -180,31 +188,53 @@ a.ctaa:hover path.two {
 
 #match_level_rating_district + label {
   color: rgba(244,162,64,1);
+  &:hover{
+    color: white;
+    background-color :rgba(244,162,64,1);
+    opacity: 0.5;
+    border: solid 3px black;
+  }
 }
 
 #match_level_rating_district:checked + label {
   background-color:rgba(244,162,64,1);
   border-color:rgba(244,162,64,1);
+  border: solid 3px black;
+
 }
 
 
 #match_level_rating_pro_a + label {
   color: rgba(255,113,67,1);
+  &:hover{
+    color: white;
+    background-color: rgba(255,113,67,1);
+    opacity: 0.5;
+    border: solid 3px black;
+  }
 }
 
 #match_level_rating_pro_a:checked + label {
   background-color:  rgba(255,113,67,1);
   border-color: rgba(255,113,67,1);
+  border: solid 3px black;
 }
 
 
 #match_level_rating_nba + label {
   color:  rgba(255,53,127,1);
+  &:hover{
+    color: white;
+    background-color:  rgba(255,53,127,1);
+    opacity: 0.5;
+    border: solid 3px black;
+  }
 }
 
 #match_level_rating_nba:checked + label {
   background-color:  rgba(255,53,127,1);
   border-color:  rgba(255,53,127,1);
+  border: solid 3px black;
 }
 
 label, legend {
@@ -244,8 +274,7 @@ label, legend {
     font-size:16px;
   }
 }
-@media only screen and (max-height: 850px) {
-  .contents{
-    height: 45.4%;
-  }
-}
+// @media only screen and (max-height: 850px) {
+//   .contents{
+//     height: 45.4%;
+//   }
