@@ -1,6 +1,10 @@
 .cards {
   display: flex;
 }
+.index-matchs{
+  padding-right: calc(var(--bs-gutter-x) * .9);
+  padding-left: calc(var(--bs-gutter-x) * .2);
+}
 
 body {
   background-color: #eee;
@@ -139,17 +143,23 @@ body {
 }
 .filtersubmit{
   width: 100%;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 button, [type="button"], [type="reset"], [type="submit"] {
   -webkit-appearance: button;
-  width: 90%;
+  width: 100%;
 }
 span:nth-child(2) {
   position: relative;
   top: 12%;
 }
 .filter-form{
+  justify-content: space-evenly;
   color: white;
-  margin-left: 40px;
-  margin-top: 20px;
+}
+.hidegames{
+  margin-bottom: 0;
+  white-space: nowrap;
+  color: white;
 }
