@@ -25,11 +25,11 @@
         </label>
       </div>
         <%#= f.button :submit, 'Apply filters' %>
-        <span class="filtersubmit"><%= f.button "Apply filters" %></span>
+        <span id="applyfilter"><%= f.button "Apply filters" %></span>
 
       <% end %>
     </div>
-    <button type='button' id='filters' onclick="toggleText()">Click to filter results</button>
+    <button type='button' id='filters' class='filtersubmit' onclick="toggleText()">Click to filter results</button>
 
       <!-- ITERATION AUTOUR DE CHAQUE MATCH -->
       <% @matches.each do |match| %>

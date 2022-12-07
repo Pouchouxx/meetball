@@ -40,13 +40,27 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-.card{
-  background-color:#FBEEDA;
-  .orange-btn {
-    text-align: center;
-    font-size: 1rem;
+
+.cards {
+  margin-top: -25px;
+    .card{
+      background-color:#FBEEDA;
+      min-height: 204px;
+    i {
+      text-align:center;
+      margin-top: 1em;
+    }
+    h6 {
+      text-align:center;
+      font-weight: bolder;
+    }
+      .orange-btn {
+        text-align: center;
+        font-size: 1rem;
+    }
   }
 }
+
 .part-one{
   background-color:orange;
 }
@@ -192,14 +206,14 @@ a.ctaa:hover path.two {
     color: white;
     background-color :rgba(244,162,64,1);
     opacity: 0.5;
-    border: solid 3px black;
+    border: solid 1px black;
   }
 }
 
 #match_level_rating_district:checked + label {
   background-color:rgba(244,162,64,1);
   border-color:rgba(244,162,64,1);
-  border: solid 3px black;
+  border: solid 1px black;
 
 }
 
@@ -210,14 +224,14 @@ a.ctaa:hover path.two {
     color: white;
     background-color: rgba(255,113,67,1);
     opacity: 0.5;
-    border: solid 3px black;
+    border: solid 1px black;
   }
 }
 
 #match_level_rating_pro_a:checked + label {
   background-color:  rgba(255,113,67,1);
   border-color: rgba(255,113,67,1);
-  border: solid 3px black;
+  border: solid 1px black;
 }
 
 
@@ -227,14 +241,14 @@ a.ctaa:hover path.two {
     color: white;
     background-color:  rgba(255,53,127,1);
     opacity: 0.5;
-    border: solid 3px black;
+    border: solid 1px black;
   }
 }
 
 #match_level_rating_nba:checked + label {
   background-color:  rgba(255,53,127,1);
   border-color:  rgba(255,53,127,1);
-  border: solid 3px black;
+  border: solid 1px black;
 }
 
 label, legend {

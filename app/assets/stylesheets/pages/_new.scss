@@ -200,17 +200,22 @@ button:focus{
     color: white;
   }
   &:hover  {
-    border-color: #ff7143;
-    color: #ff7143;
-    background-color: white;
+    border-color: black;
+    color: black;
+    background-color: #F4F0FB;
     border-radius: 1em;
   }
 
+}
 
   #new_match{
-    .match_date, .match_address{
-    margin: none;
+    .form-select, .form-control {
+        margin: none;
+        background-color: #F4F0FB;
+        border-radius: 1em;
+        color: black;
+        border-color: black;
+        border: solid 1px black;
    }
-  }
 
   }
