@@ -26,7 +26,7 @@ class Match < ApplicationRecord
   has_many :messages, dependent: :destroy
   has_many :participations, through: :teams
   validates :date, :level_rating, presence: true
-  validates :comment, presence: true, length: { in: 20..200 }
+  validates :comment, presence: true, length: { in: 5..200 }
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
   after_create :prepare_teams
