@@ -47,4 +47,33 @@ a.nav-link{
   font-size: larger;
   border-radius: 1em;
   margin-right: 10px;
+  border: 1px solid white;
+  border-radius: 27px;
+
+  &:hover{
+    border: 1px solid white;
+    border-radius: 27px;
+    background-color: white;
+    color: salmon !important;
+    opacity: 1 !important;
 }
+  }
+
+  .img-pseudo{
+    border-radius: 27px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+
+      .nav-item{
+
+        color: white;
+        padding-right: 5px;
+        font-size: 15px;
+        align-items: center;
+      }
+  }
+
+  .collapse.navbar-collapse{
+    align-items: center;
+  }
