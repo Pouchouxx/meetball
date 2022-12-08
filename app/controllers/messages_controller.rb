@@ -13,7 +13,9 @@ class MessagesController < ApplicationController
       head :ok
 
     else
-      render "matches/show", status: :unprocessable_entity
+      @team_one = @match.teams.first
+      @team_two = @match.teams.last
+      render "matches/recap", status: :unprocessable_entity
     end
   end
 
