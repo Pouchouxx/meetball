@@ -11,7 +11,8 @@ export default class extends Controller {
   connect() {
     flatpickr(this.dateInputTarget, {
       mode: 'single',
-      enableTime: true
+      enableTime: true,
+      dateFormat: "m-d H:i",
     })
   }
 }

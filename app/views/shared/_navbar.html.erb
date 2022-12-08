@@ -1,4 +1,4 @@
-  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon <%= "navbar-transparent" if params[:action]=="home" %> <%= "navbar-show" if params[:action]=="show" %> ">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon <%= "navbar-transparent" if params[:action]=="home" %> <%= "navbar-show" if params[:action]=="show" %> ">
     <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
         <%= image_tag "balllogo" %>
@@ -25,11 +25,11 @@
                 <% else %>
                   <%= image_tag "http://4.bp.blogspot.com/_R0Rc6mb8H6E/S1TTZJCtq8I/AAAAAAAAC9A/a50aYOK5o0o/w1200-h630-p-k-no-nu/design-fetish-no-photo-facebook-1.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                 <% end %>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+                </div>
+              </li>
             </div>
-              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
-              </div>
-            </li>
           <% else %>
             <li class="nav-item">
               <%= link_to "Login", new_user_session_path, class: "nav-link" %>

@@ -43,8 +43,6 @@ $title-text: 'Work Sans', sans-serif;
   box-shadow: 0 0 40px  rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
-  height: 41.25rem;
-  position: absolute;
   width: 31.75rem;
   padding: 10 rem;
   padding: 25px;
@@ -222,4 +220,14 @@ button:focus{
    .mb-3.select.optional.match_address {
     margin-bottom: 0 !important;
   }
+}
+.form-label{
+  display:none;
+}
+
+.match_date{
+  margin-bottom: 0 !important;
+}
+.input_address{
+  grid-gap: 1em;
 }
