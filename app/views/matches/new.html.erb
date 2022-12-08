@@ -11,18 +11,20 @@
                       }
                     } do |f| %>
             <br/>
-            <%= f.input :address, :label => "Choose your Playground", collection: Match::ADDRESSES.keys%>
-            <br>
-            <%= f.input :date,:label => "When do you want to play",
-            as: :string,
-                    input_html: {
-                      data: {
-                        flatpickr_target: 'dateInput',
+            <div class=" input_address d-flex align-items-center">
+              <%= f.input :address, collection: Match::ADDRESSES.keys, prompt: "choose your Playground"%>
+              <%= f.input :date, placeholder: "Choose a date",
+              as: :string,
+                      input_html: {
+                        data: {
+                          flatpickr_target: 'dateInput',
+                        }
                       }
-                    }
-            %>
+              %>
+            </div>
+
             <br/>
-            <%= f.input :comment, :label => "Put your message here" %>
+            <%= f.input :comment, as: :text, placeholder: "Put your message here" %>
 
             <%= f.input :level_rating, :label => "Choose your difficulty",
                     as: :radio_buttons,
