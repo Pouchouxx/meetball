@@ -103,4 +103,11 @@
     height: 100%;
     border-bottom-right-radius: 12px;
   }
+  .receiver-style .chat-avatar {
+    border-radius: 50px;
+    position: absolute;
+    top: -16px;
+    left: -14px;
+    box-shadow: 2px 3px 23px grey;
+}
 }
