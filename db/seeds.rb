@@ -315,7 +315,7 @@ match9 = Match.create!(
   address: '22 Rue Duperré, 75009 Paris',
   comment: 'Bonne ambiance, très chill',
   date: Date.today + 1.days + 16.hours,
-  level_rating: 1,
+  level_rating: 3,
   user: user10
 )
 
@@ -330,7 +330,7 @@ match10 = Match.create!(
 match11 = Match.create!(
   address: '61 boulevard Vincent Auriol, 75013 Paris',
   comment: 'je prend tout le monde en 1v1',
-  date: Date.today + 1.days + 16.hours,
+  date: Date.today + 1.days + 19.hours,
   level_rating: 2,
   user: user12
 )
@@ -361,7 +361,7 @@ match14 = Match.create!(
 match15 = Match.create!(
   address: '61 boulevard Vincent Auriol, 75013 Paris',
   comment: 'Do not be affraid about my skills',
-  date: Date.today + 20.hours,
+  date: Date.today + 19.hours,
   level_rating: 2,
   user: user16
 )
@@ -430,9 +430,9 @@ match23 = Match.create!(
 
 match24 = Match.create!(
   address: '22 Rue Duperré, 75009 Paris',
-  comment: 'On retaffe les bases et petits jeux, venez si vous etes chauds ! (HORSE, lucky luke ou 21)',
+  comment: 'Gros concours venez avec vos potes !',
   date: Date.today + 9.days + 14.hours,
-  level_rating: 2,
+  level_rating: 3,
   user: user8
 )
 
@@ -519,7 +519,6 @@ participation15 = Participation.create(
   user: user15,
   team: match20.teams.last
 )
-
 participation16 = Participation.create(
   user: user6,
   team: match10.teams.first
@@ -610,6 +609,11 @@ participation34 = Participation.create(
   team: match23.teams.last
 )
 participation35 = Participation.create(
-  user: user16,
-  team: match15.teams.last
+  user: user17,
+  team: match15.teams.first
 )
+team2 = match15.teams.last
+puts team2
+team2.name = "#{user17.pseudo}'s teams"
+team2.save!
+puts team2
