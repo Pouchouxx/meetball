@@ -1,0 +1,89 @@
+<!-- DIV ENGLOBANT LES CARDS ET LA MAP -->
+<div class="d-flex home">
+  <div class="flex-fill container-fluid mx-3 col-8">
+    <div class="row">
+    <div id='demo' style='display: none'>
+        <%= form_with url: matches_path, method: :get do |f| %>
+      <div class="d-flex filter-form">
+
+        <label class="d-flex align-items-center">
+          <p class="hidegames">Hide full games&nbsp;</p>
+          <%= f.check_box :free_slots, {}, true, false %>
+        </label>
+
+        <label>
+          Difficulty
+          <%= f.select :level_rating, ["Any", ["District", 1], ["Pro A", 2], ["NBA", 3]], selected: params[:level_rating] %>
+        </label>
+        <label>
+          &nbsp;Arrondissement
+          <%= f.select :address, ["Any", ["1er", '75001'], ["2ème", '75002'], ["3ème", '75003'], ["4ème", '75004'], ["5ème", '75005'], ["6ème", '75006'], ["7ème", '75007'], ["8ème", '75008'], ["9ème", '75009'], ["10ème", '75010,'], ["11ème", '75011,'], ["12ème", '75012'], ["13ème", '75013'], ["14ème", '75014,'], ["15ème", '75015'], ["16ème", '75016'], ["17ème", '75017'], ["18ème", '75018'], ["19ème", '75019'], ["20ème", '75020']], selected: params[:address] %>
+        </label>
+        <label>
+          &nbsp;Date
+          <%= f.select :date, ["Anyday", "Today", "Tomorrow", "This week", "Next week"], selected: params[:date] %>
+        </label>
+      </div>
+        <%#= f.button :submit, 'Apply filters' %>
+        <span id="applyfilter"><%= f.button "Apply filters" %></span>
+
+      <% end %>
+    </div>
+    <button type='button' id='filters' class='filtersubmit' onclick="toggleText()">Click to filter results</button>
+
+      <!-- ITERATION AUTOUR DE CHAQUE MATCH -->
+      <% @matches.each do |match| %>
+        <div class="col-6 index-matchs">
+            <!-- CARD -->
+            <%= link_to match_path(match) do %>
+            <div class="card p-3 mb-3" style="background-size: cover; background-position: center; background-repeat: no-repeat; background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= Match::ADDRESSES[match.address] %>);">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-row align-items-center">
+                        <div class="icon">
+                          <% if match.user.photo.attached? %>
+                            <%= cl_image_tag match.user.photo.key, crop: :fill, gravity: :face,  class:"icon" %>
+                          <% else %>
+                            <%= image_tag "http://4.bp.blogspot.com/_R0Rc6mb8H6E/S1TTZJCtq8I/AAAAAAAAC9A/a50aYOK5o0o/w1200-h630-p-k-no-nu/design-fetish-no-photo-facebook-1.jpg", class:"icon" %>
+                          <% end %>
+                        </div>
+                        <div class="ms-2 c-details">
+                            <h6 class="mb-0 card-organizer"><%= match.user.first_name %></h6>
+                        </div>
+                    </div>
+                    <div class="badge bg-text badge-<%= match.level_rating %>">
+
+                          <span><%= match.category %></span>
+
+
+                    </div>
+                </div>
+                <div class="mt-5">
+                  <div class="address">
+                    <h4 class="heading bg-text size-text" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.2)"><%= match.address.split(",").first %></h4>
+                    <h4 class="text-white" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.2)"><%= match.address.split(",").second %></h4>
+                  </div>
+                    <h5 class="date-match"><p>Le <b><%= match.date.strftime('%d/%m') %> à <%= match.date.strftime('%H:%M') %></b> (in <%= distance_of_time_in_words(Time.now + 1.hours, match.date) %>)</p></h5>
+                    <div class="mt-5">
+                        <div class="progress">
+                            <div class="progress-bar bg-text" role="progressbar" style="width:<%=match.percentage%>%" aria-valuenow="<%=match.percentage%>" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="mt-3 bg-text"> <span class="text1"><%= match.max_per_match  - match.participations.count%> spots remaining <span class="text2"><%= match.max_per_match %></span></span> </div>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+<!-- MAPBOX AVEC TERRAINS -->
+    <div class="flex-fill container-fluid  mb-3 me-3 col-4 bg-map">
+    <div id="map"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+    </div>
+    </div>
+
+</div>
