@@ -24,6 +24,11 @@ class MatchesController < ApplicationController
   def create
     @match = Match.new(match_params)
     @match.user = current_user
+    data = params.dig("match", "date")&.scan(/(\d{1,2})-(\d{1,2})\s(\d{1,2}):(\d{1,2})/)
+
+    data&.flatten!
+    @match.date = DateTime.new(Date.today.year, data[0]&.to_i || 12, data[1]&.to_i || 10, data[2]&.to_i || 12, data[3]&.to_i || 30)
+
     if @match.save
       redirect_to matches_path
     else

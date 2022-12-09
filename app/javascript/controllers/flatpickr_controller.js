@@ -9,9 +9,11 @@ export default class extends Controller {
   static targets = [ 'dateInput']
 
   connect() {
+    // console.log(this.dateInputTarget)
     flatpickr(this.dateInputTarget, {
       mode: 'single',
       enableTime: true,
+      // time_24hr: true,
       dateFormat: "m-d H:i",
     })
   }
