@@ -614,6 +614,6 @@ participation35 = Participation.create(
 )
 team2 = match15.teams.last
 puts team2
-team2.name = "#{user17.pseudo}'s teams"
+team2.name = "#{user13.pseudo}"
 team2.save!
 puts team2
