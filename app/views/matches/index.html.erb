@@ -29,7 +29,9 @@
 
       <% end %>
     </div>
-    <button type='button' id='filters' class='filtersubmit' onclick="toggleText()">Click to filter results</button>
+    <div class="container">
+      <button type='button' id='filters' class='filtersubmit' onclick="toggleText()">Click to filter results</button>
+    </div>
 
       <!-- ITERATION AUTOUR DE CHAQUE MATCH -->
       <% @matches.each do |match| %>
@@ -43,7 +45,7 @@
                           <% if match.user.photo.attached? %>
                             <%= cl_image_tag match.user.photo.key, crop: :fill, gravity: :face,  class:"icon" %>
                           <% else %>
-                            <%= image_tag "http://4.bp.blogspot.com/_R0Rc6mb8H6E/S1TTZJCtq8I/AAAAAAAAC9A/a50aYOK5o0o/w1200-h630-p-k-no-nu/design-fetish-no-photo-facebook-1.jpg", class:"icon" %>
+                            <%= image_tag "http://4.bp.blogspot.com/_R0Rc6mb8H6E/S1TTZJCtq8I/AAAAAAAAC9A/a50aYOK5o0o/w1200-h630-p-k-no-nu/desisgn-fetish-no-photo-facebook-1.jpg", class:"icon" %>
                           <% end %>
                         </div>
                         <div class="ms-2 c-details">
