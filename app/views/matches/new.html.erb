@@ -12,7 +12,7 @@
                     } do |f| %>
             <br/>
             <div class=" input_address d-flex align-items-center">
-              <%= f.input :address, collection: Match::ADDRESSES.keys, prompt: "choose your Playground"%>
+              <%= f.input :address, collection: Match::ADDRESSES.keys, prompt: "Choose your Playground"%>
               <%= f.input :date, placeholder: "Choose a date",
               as: :string,
                       input_html: {
@@ -24,7 +24,7 @@
             </div>
 
             <br/>
-            <%= f.input :comment, as: :text, placeholder: "Put your message here" %>
+            <%= f.input :comment, as: :text, placeholder: "Put your message here", input_html: { style: "resize: none" }%>
 
             <%= f.input :level_rating, :label => "Choose your difficulty",
                     as: :radio_buttons,

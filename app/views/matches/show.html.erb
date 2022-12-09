@@ -5,9 +5,9 @@
   <div class="col-md-6 quarter part-one">
     <h4 class="p-3"> <strong>Join the team of your choice</strong> </h4>
     <!-- DIV PERMETTANT L'ALIGNEMENT DES 2 CARDS L'UNE A COTE DE L'AUTRE -->
-    <div class="cards" style="display:flex; align-items: center; justify-content: center;">
+    <div class="cards" style="display:flex; align-items: center; justify-content: space-around;">
       <!-- DIV ENGLOBANT LA CARD DE LA PREMIERE EQUIPE -->
-      <div class="col-4 m-4" style="">
+      <div class="col-4 mb-4" style="">
         <div class="card">
           <h6><%= "#{@team_one.name}'s team" %></h6>
           <div class="mx-auto" style="display:flex;">
@@ -37,7 +37,7 @@
 
       </div>
       <!-- DIV ENGLOBANT LA CARD DE LA DEUXIEME EQUIPE -->
-      <div class="col-4 m-4">
+      <div class="col-4 mb-4">
         <div class="card">
           <h6><%= "#{@team_two.name}'s team "%></h6>
           <div class="mx-auto" style="display:flex;">
