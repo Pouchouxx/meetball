@@ -299,7 +299,7 @@ match6 = Match.create!(
 match7 = Match.create!(
   address: 'Avenue Pierre Loti, 75007 Paris',
   comment: 'Training sur les shoot ce soir, tout niveau accepté',
-  date: Date.today + 3.hours,
+  date: Date.today + 13.hours,
   level_rating: 1,
   user: user8
 )
@@ -315,7 +315,7 @@ match9 = Match.create!(
   address: '22 Rue Duperré, 75009 Paris',
   comment: 'Bonne ambiance, très chill',
   date: Date.today + 1.days + 16.hours,
-  level_rating: 3,
+  level_rating: 1,
   user: user10
 )
 
@@ -330,7 +330,7 @@ match10 = Match.create!(
 match11 = Match.create!(
   address: '61 boulevard Vincent Auriol, 75013 Paris',
   comment: 'je prend tout le monde en 1v1',
-  date: Date.today + 1.days + 19.hours,
+  date: Date.today + 1.days + 16.hours,
   level_rating: 2,
   user: user12
 )
@@ -345,7 +345,7 @@ match12 = Match.create!(
 match13 = Match.create!(
   address: '68 boulevard poniatowski, 75012 Paris',
   comment: 'Le perdant offre à boire',
-  date: Date.today + 2.days + 6.hours,
+  date: Date.today + 2.days + 8.hours,
   level_rating: 1,
   user: user14
 )
@@ -353,7 +353,7 @@ match13 = Match.create!(
 match14 = Match.create!(
   address: '234 Boulevard de la Villette, 75019 Paris',
   comment: 'only 3points',
-  date: Date.today + 3.days + 5.hours,
+  date: Date.today + 3.days + 10.hours,
   level_rating: 3,
   user: user15
 )
@@ -361,7 +361,7 @@ match14 = Match.create!(
 match15 = Match.create!(
   address: '61 boulevard Vincent Auriol, 75013 Paris',
   comment: 'Do not be affraid about my skills',
-  date: Date.today + 19.hours,
+  date: Date.today + 20.hours,
   level_rating: 2,
   user: user16
 )
@@ -369,7 +369,7 @@ match15 = Match.create!(
 match16 = Match.create!(
   address: '101 Quai Jacques Chirac, 75015 Paris',
   comment: 'Je veux devenir coach pour les pro, je donne un cours de basket ce soir.(debutant-intermédiaire only)',
-  date: Date.today + 8.hours,
+  date: Date.today + 9.hours,
   level_rating: 2,
   user: user17
 )
@@ -430,9 +430,9 @@ match23 = Match.create!(
 
 match24 = Match.create!(
   address: '22 Rue Duperré, 75009 Paris',
-  comment: 'Gros concours venez avec vos potes !',
+  comment: 'On retaffe les bases et petits jeux, venez si vous etes chauds ! (HORSE, lucky luke ou 21)',
   date: Date.today + 9.days + 14.hours,
-  level_rating: 3,
+  level_rating: 2,
   user: user8
 )
 
@@ -518,4 +518,98 @@ participation14 = Participation.create(
 participation15 = Participation.create(
   user: user15,
   team: match20.teams.last
+)
+
+participation16 = Participation.create(
+  user: user6,
+  team: match10.teams.first
+)
+participation17 = Participation.create(
+  user: user3,
+  team: match10.teams.first
+)
+participation18 = Participation.create(
+  user: user4,
+  team: match13.teams.last
+)
+team = match19.teams.last
+team.name = "#{user15.pseudo}'s teams"
+
+participation20 = Participation.create(
+  user: user5,
+  team: match13.teams.last
+)
+
+participation21 = Participation.create(
+  user: user6,
+  team: match11.teams.first
+)
+participation22 = Participation.create(
+  user: user3,
+  team: match11.teams.first
+)
+participation23 = Participation.create(
+  user: user4,
+  team: match11.teams.last
+)
+team = match1.teams.last
+team.name = "#{user4.pseudo}'s teams"
+
+participation24 = Participation.create(
+  user: user5,
+  team: match11.teams.last
+)
+participation25 = Participation.create(
+  user: user13,
+  team: match11.teams.last
+)
+
+participation26 = Participation.create(
+  user: user4,
+  team: match9.teams.last
+)
+team = match1.teams.last
+team.name = "#{user4.pseudo}'s teams"
+
+participation27 = Participation.create(
+  user: user5,
+  team: match9.teams.last
+)
+participation28 = Participation.create(
+  user: user13,
+  team: match24.teams.last
+)
+
+participation29 = Participation.create(
+  user: user20,
+  team: match9.teams.last
+)
+participation30 = Participation.create(
+  user: user16,
+  team: match24.teams.last
+)
+
+participation31 = Participation.create(
+  user: user4,
+  team: match15.teams.last
+)
+team = match1.teams.last
+team.name = "#{user4.pseudo}'s teams"
+
+participation32 = Participation.create(
+  user: user5,
+  team: match23.teams.last
+)
+participation33 = Participation.create(
+  user: user13,
+  team: match15.teams.last
+)
+
+participation34 = Participation.create(
+  user: user20,
+  team: match23.teams.last
+)
+participation35 = Participation.create(
+  user: user16,
+  team: match15.teams.last
 )
