@@ -29,7 +29,9 @@
 
       <% end %>
     </div>
-    <button type='button' id='filters' class='filtersubmit' onclick="toggleText()">Click to filter results</button>
+    <div class="container">
+      <button type='button' id='filters' class='filtersubmit' onclick="toggleText()">Click to filter results</button>
+    </div>
 
       <!-- ITERATION AUTOUR DE CHAQUE MATCH -->
       <% @matches.each do |match| %>
