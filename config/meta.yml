@@ -1,6 +1,6 @@
 # config/meta.yml
 
 meta_product_name: "MeetBall"
-meta_title: "MeetBall - Spice up ypur game."
+meta_title: "MeetBall - Spice up your game."
 meta_description: "Find basketball games quickly to play anytime and anywhere"
 meta_image: "cover.JPEG" # should exist in `app/assets/images/`
